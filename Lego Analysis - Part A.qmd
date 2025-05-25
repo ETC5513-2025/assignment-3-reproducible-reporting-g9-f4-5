@@ -1,0 +1,7 @@
+---
+title: "Part A - Lego Analysis"
+format: pdf
+editor: visual
+---
+
+## 
