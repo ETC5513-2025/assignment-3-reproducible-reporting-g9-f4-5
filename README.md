@@ -2,8 +2,9 @@
 
 Group Members:
 
-*
-*
-*
+* William Tang
+* Prem MV
+* Rong Chen
+* Zhaoyu Zhang
 
-Topic: 
+Topic: Lego analysis
