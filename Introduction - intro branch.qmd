@@ -1,0 +1,71 @@
+---
+title: "Introduction - Lego Analysis"
+format: html
+editor: visual
+---
+
+---
+title: "Lego Analysis" / "How does Lego fullfill its customers" /  
+source: "TidyTuesday data sets"
+author:
+  - name: "William Tang"                   
+    StudentID:
+    email: ""       
+    
+  - name: "Rong Chen"                     
+    StudentID:
+    email: ""
+  
+  - name: "Prem MV"                     
+    StudentID:
+    email: ""    
+  
+  - name: "Zhaouyu Zhang"                     
+    StudentID:
+    email: "" 
+    
+    
+date: "30 May 2025"                       
+format:
+  pdf:
+     Theme: Journal
+---
+
+## Title : Brick by Brick, A Lego Analysis
+
+------------------------------------------------------------------------
+
+### Table of Contents
+
+1.  Title and Authors
+2.  Table of contents
+3.  Executive Summary
+4.  Introduction
+5.  Methodology
+6.  Results
+7.  Discussion, conclusion and recommendations
+
+------------------------------------------------------------------------
+
+## Introduction
+
+(Why Lego data? \
+How is it reported?\
+What is the most popular Lego set?)
+
+##### LEGO is a globally recognized toy brand which leads the construction-toy market with a diverse array of sets released each year and TidyTuesday community has taken the liberty to aggregate that year’s releases into a publicly available dataset. This report gives an analysis of the popular themes, year on year trends and inventory management by Lego to full-fill its customers
+
+All of you have used and have gone the TidyTuesday data sets. Today, we are presenting
+
+The word "Lego" was derived from the Danish phrase "leg godt Lego" which translates to "play well".Lego is in the line of manufacturing plastic toys also called as interlocking toy bricks, which started in the year 1949 and originated from Denmark. The Lego Group began in the workshop of "Ole Kirk Christiansen" a carpenter from Billund, Denmark who in the beginning made wooden toys and then adapted to Kiddicraft(Self blocking Bricks) which was invented by Hillary Page.
+
+
+1. Lego, originating from Denmark, was officially founded in the year 1934 by Ole Kirk Christiansen and is one of the world’s most iconic toy companies. 
+2. Initially Christiansen was a carpenter who was making wooden toys but as time passed by, he adapted to Kiddi-craft(Self blocking Bricks) and then automatic binding bricks were invented. 
+3. Over the years, Lego has expanded the production line vastly by producing theme based Lego-sets like Star-wars, Harry Potter, Marvel etc... and the very first store to open anywhere in the world was in Sydney, Australia, in the year 1984.
+4. Currently, the most biggest Lego set available is the world map set consisting of 11,695 pieces and there are much more sets like these which really keeps you occupied.
+5. Even though Lego stopped patent for Lego bricks a long time ago, its competitors could not stand a chance in the toy-construction market for example Lego sued the CoCo Toy Company for copyright infringement and the company has to cease manufacture of the products.
+6. And when we talk about availability of products and customer satisfaction, Inventory management is a key strength for LEGO. It ensures that popular themes are available to meet demand while efficiently handling production and supply chains.
+7. 
+
+
