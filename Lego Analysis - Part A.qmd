@@ -4,4 +4,114 @@ format: pdf
 editor: visual
 ---
 
-## 
+## Analysis of Lego
+
+```{r}
+#| message: false
+#| warning: false
+# Loading libraries
+
+library(tidyverse)
+library(tidytuesdayR)
+library(ggplot2)
+library(scales)
+```
+
+Reading in dataset
+
+```{r}
+#| message: false
+#| warning: false
+
+# Read data from tidytuesday
+tuesdata = tidytuesdayR::tt_load('2022-09-06')
+
+for (name in names(tuesdata)) 
+{var_name = gsub("\\.csv$", "", name) 
+  assign(var_name, tuesdata[[name]])}
+
+rm(tuesdata)
+```
+
+Explore data
+
+```{r}
+head(colors)
+head(elements)
+head(inventories)
+head(inventory_minifigs)
+head(inventory_parts)
+head(inventory_sets)
+head(minifigs)
+head(part_categories)
+head(part_relationships)
+head(parts)
+head(sets)
+head(themes)
+```
+
+Considering the popularity of Lego, which is the most popular and the least popular themes of Lego.
+
+```{r}
+# Joining sets with themes and filtering out the sets with no parts due to error in data collection
+set_themes = sets |>
+  left_join(themes |>
+              select(id, theme_name = name), 
+              by = c(theme_id = "id")) |>
+  mutate(numparts = na_if(num_parts, 0))
+
+# Finding out the most popular themes
+most_popular = set_themes |>
+  group_by(theme_name) |>
+  summarize(total_sets = n(), .groups = "drop") |>
+  arrange(desc(total_sets)) |>
+  head(20) |>
+  ggplot(aes(x = total_sets, y = reorder(theme_name, total_sets))) +
+  geom_bar(stat = "identity", aes(fill = total_sets)) +
+  scale_fill_gradient(low = "#00648C", high = "#00BC8C")+
+  labs(title = "All time most popular lego themes",
+       x = "Total number of sets",
+       y = "Theme") +
+  theme_minimal()
+
+# Finding out the least popular themes
+least_popular = set_themes |>
+  group_by(theme_name) |>
+  summarize(total_sets = n(), .groups = "drop") |>
+  arrange(desc(total_sets)) |>
+  tail(20) |>
+  ggplot(aes(x = total_sets, y = reorder(theme_name, total_sets))) +
+  geom_bar(stat = "identity", aes(fill = total_sets)) +
+  scale_fill_gradient(low = "#00648C", high = "#00BC8C")+
+  labs(title = "All time least popular lego themes",
+       x = "Total number of sets",
+       y = "Theme") +
+  theme_minimal()
+
+most_popular
+least_popular
+```
+
+Seeing the trends of Lego sets over the years, how hard or how complex have the Lego sets become.
+
+```{r}
+theme_name_summary = set_themes |> 
+  group_by(theme_name) |>
+  summarize(n_sets = n(), 
+            median_parts = median(num_parts)) |>
+  arrange(desc(median_parts)) |> 
+  filter(n_sets >= 100)
+
+part_year = set_themes |>
+  group_by(year) |>
+  summarise(median_parts = median(num_parts, na.rm = TRUE), .groups = "drop") |>
+  ggplot(aes(x = year, y = median_parts)) +
+  geom_line(color = "#00BC8C", linewidth = 1) +
+  geom_point(color = "black") +
+  labs(title = "Median number of parts over the years",
+       x = "Year",
+       y = "Median parts per set")+
+  theme_minimal()
+
+part_year
+```
