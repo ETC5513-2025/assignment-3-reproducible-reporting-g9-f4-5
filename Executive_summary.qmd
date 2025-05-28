@@ -30,6 +30,8 @@ editor: visual
 3.  
 4.  We came to a conclusion that marketing and sales teams spotlight these high impact themes and test promotions for rising themes to stay where they are in the toy market
 
+---
+
 LEGO is a globally recognized toy brand which leads the construction-toy market with a diverse array of sets released each year and TidyTuesday community has taken the liberty to aggregate that year’s releases into a publicly available dataset. This report gives an analysis of the popular themes, year on year trends and inventory management by Lego to full-fill its customers
 
 A small fact before we start -
