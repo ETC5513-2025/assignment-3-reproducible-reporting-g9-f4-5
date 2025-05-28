@@ -50,57 +50,93 @@ head(sets)
 head(themes)
 ```
 
-Considering the popularity of Lego, which is the most popular and the least popular themes of Lego.
+Considering the popularity of Lego, which is the most popular and the least popular themes of Lego and how many parts did they have median
+
+Methodology:\
+\
+Many sets did not have a number of parts and were either 0 or NA, which affected the data analysis and data manipulation. What we've done is filtered only the ones that we know of how many parts as if they are not documented then there is no point in analysing it.
 
 ```{r}
+#| message: false
+#| warning: false
+
 # Joining sets with themes and filtering out the sets with no parts due to error in data collection
 set_themes = sets |>
+  filter(!is.na(num_parts) & num_parts >0) |>
   left_join(themes |>
               select(id, theme_name = name), 
-              by = c(theme_id = "id")) |>
-  mutate(numparts = na_if(num_parts, 0))
+              by = c(theme_id = "id"))
+```
+
+```{r}
+#| message: false
+#| warning: false
 
 # Finding out the most popular themes
 most_popular = set_themes |>
   group_by(theme_name) |>
-  summarize(total_sets = n(), .groups = "drop") |>
+  summarize(total_sets = n(),
+            median_parts = round(median(num_parts, na.rm = TRUE)),
+            .groups = "drop") |>
   arrange(desc(total_sets)) |>
   head(20) |>
   ggplot(aes(x = total_sets, y = reorder(theme_name, total_sets))) +
-  geom_bar(stat = "identity", aes(fill = total_sets)) +
-  scale_fill_gradient(low = "#00648C", high = "#00BC8C")+
-  labs(title = "All time most popular lego themes",
-       x = "Total number of sets",
-       y = "Theme") +
-  theme_minimal()
-
-# Finding out the least popular themes
-least_popular = set_themes |>
-  group_by(theme_name) |>
-  summarize(total_sets = n(), .groups = "drop") |>
-  arrange(desc(total_sets)) |>
-  tail(20) |>
-  ggplot(aes(x = total_sets, y = reorder(theme_name, total_sets))) +
-  geom_bar(stat = "identity", aes(fill = total_sets)) +
-  scale_fill_gradient(low = "#00648C", high = "#00BC8C")+
-  labs(title = "All time least popular lego themes",
+  geom_bar(stat = "identity", aes(fill = median_parts)) +
+  geom_text(aes(label = median_parts, 
+                x = total_sets + 5),
+            hjust = 0, size = 3.2) +
+  scale_fill_gradient(low = "#00648C", high = "#00BC8C", limits = c(0, 2600)) +
+  labs(fill = "Median parts",
+       title = "All time most popular lego themes with median parts",
        x = "Total number of sets",
        y = "Theme") +
   theme_minimal()
 
 most_popular
-least_popular
 ```
 
-Seeing the trends of Lego sets over the years, how hard or how complex have the Lego sets become.
+```{r}
+#| message: false
+#| warning: false
+
+# Finding out the least popular themes
+least_popular = set_themes |>
+  group_by(theme_name) |>
+  summarize(total_sets = n(),
+            median_parts = round(median(num_parts, na.rm = TRUE)),
+            .groups = "drop") |>
+  arrange(desc(total_sets)) |>
+  tail(20) |>
+  ggplot(aes(x = total_sets, y = reorder(theme_name, total_sets))) +
+  geom_bar(stat = "identity", aes(fill = median_parts)) +
+  geom_text(aes(label = median_parts),
+            hjust = 0, size = 3.2) +
+  scale_fill_gradient(low = "#00648C", high = "#00BC8C", limits = c(0, 2600)) +
+  labs(fill = "Median parts",
+       title = "All time least popular lego themes with median parts",
+       x = "Total number of sets",
+       y = "Theme")+ 
+  xlim(0,4)+
+  theme_minimal()
+
+least_popular
+```
 
 ```{r}
 theme_name_summary = set_themes |> 
   group_by(theme_name) |>
   summarize(n_sets = n(), 
             median_parts = median(num_parts)) |>
-  arrange(desc(median_parts)) |> 
+  arrange(desc(n_sets)) |> 
   filter(n_sets >= 100)
+
+theme_name_summary
+```
+
+Seeing the trends of Lego sets over the years, how complex have the Lego sets become.
+
+```{r}
+
 
 part_year = set_themes |>
   group_by(year) |>
@@ -108,10 +144,17 @@ part_year = set_themes |>
   ggplot(aes(x = year, y = median_parts)) +
   geom_line(color = "#00BC8C", linewidth = 1) +
   geom_point(color = "black") +
+  geom_smooth(method = "loess", se = FALSE, color = "red", linetype = "dashed") +
   labs(title = "Median number of parts over the years",
        x = "Year",
        y = "Median parts per set")+
-  theme_minimal()
+  theme_minimal() 
 
 part_year
+```
+
+Which sets have the most parts
+
+```{r}
+
 ```
