@@ -4,21 +4,31 @@ format: html
 editor: visual
 ---
 
-## Executive Summary
+## A.Executive Summary
 
-(Why Lego data? \
-How is it reported?\
-What is the most popular Lego set?)
-
-1.   This report explores the diversity and evolution of Lego sets using the 2022 TidyTuesday data-set which includes details like set numbers, themes, inventory list and number of parts
+1.  This report explores the diversity and evolution of Lego sets using the 2022 TidyTuesday data-set which includes details like set numbers, themes, inventory list and number of parts
 
 2.  
 
-3.   By looking over the inventory list and the number of available theme sets, we identify the trends in Lego's product strategy and its expansion
+3.  By looking over the inventory list and the number of available theme sets, we identify the trends in Lego's product strategy and its expansion
 
 4.  To conclude, Lego's innovation is always expanding the they commit in engaging diverse audiences in the toy's industry by introducing more and more popular sets.
 
     This report analyzes the 2022 TidyTuesday LEGO dataset to identify trends in themes, piece counts, inventory list . data-sets have been modified and joined together to have one main data file which contains all the details like inventory ID, the total quantity from one file and names of the theme, themeID and no. of parts for the theme.
+
+## B.Executive Summary
+
+1.  This report examines the 2022 TidyTuesday LEGO dataset which contains more than 1,100 official sets with metadata which can be used to identify year to year trends and get an idea of inventory management by Lego based on demand.
+2.  After data cleaning, combining and standardization, we produced a theme‐popularity bar chart and a chart with median number of parts over the year to understand trends in Lego themes and complexity in number of parts.
+3.  ....
+4.  We conclude that retailers and the LEGO Group prioritize promotional focus on these high-value themes and explore opportunities around fast growing themes.
+
+## C.Executive Summary
+
+1.  Using the 2022 TidyTuesday LEGO dataset of over 1,100 sets, we conducted a descriptive analysis to explore theme prevalence and set complexity over the years.
+2.  We implemented a data‐modification workflow which includes merging and cleaning of data-sets and generated two key visuals: a bar chart of theme release frequencies and a chart with complexity in number of parts over the years.
+3.  
+4.  We came to a conclusion that marketing and sales teams spotlight these high impact themes and test promotions for rising themes to stay where they are in the toy market
 
 LEGO is a globally recognized toy brand which leads the construction-toy market with a diverse array of sets released each year and TidyTuesday community has taken the liberty to aggregate that year’s releases into a publicly available dataset. This report gives an analysis of the popular themes, year on year trends and inventory management by Lego to full-fill its customers
 
