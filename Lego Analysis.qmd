@@ -1,0 +1,95 @@
+---
+title: "Lego Analysis"  
+source: "TidyTuesday data sets"
+author:
+  - name: "William Tang"                   
+    StudentID:
+    email: ""       
+    
+  - name: "Rong Chen"                     
+    StudentID:
+    email: ""
+  
+  - name: "Prem MV"                     
+    StudentID:
+    email: ""    
+  
+  - name: "Zhaouyu Zhang"                     
+    StudentID:
+    email: "" 
+    
+    
+date: "30 May 2025"                       
+format:
+  pdf:
+     Theme: Journal
+---
+
+## Title : Brick by Brick, A Lego Analysis
+
+------------------------------------------------------------------------
+
+### Table of Contents
+
+1.  Title and Authors
+2.  Table of contents
+3.  Executive Summary
+4.  Introduction
+5.  Methodology
+6.  Results
+7.  Discussion, conclusion and recommendations
+
+------------------------------------------------------------------------
+
+## Introduction
+
+(Why Lego data?\
+How is it reported?\
+What is the most popular Lego set?)
+
+1.  Lego, originating from Denmark, was officially founded in the year 1934 by Ole Kirk Christiansen and is one of the world’s most iconic toy companies.
+2.  Initially Christiansen was a carpenter who was making wooden toys but as time passed by, he adapted to Kiddi-craft(Self blocking Bricks) and then automatic binding bricks were invented.
+3.  Over the years, Lego has expanded the production line vastly by producing theme based Lego-sets like Star-wars, Harry Potter, Marvel etc... and the very first store to open anywhere in the world was in Sydney, Australia, in the year 1984.
+4.  (Currently, the most biggest Lego set available is the world map set consisting of 11,695 pieces and there are much more sets like these which really keeps you occupied.).
+5.  Even though Lego stopped patent for Lego bricks a long time ago, its competitors could not stand a chance in the toy-construction market for example Lego sued the CoCo Toy Company for copyright infringement and the company has to cease manufacture of the products.
+6.  (And when we talk about availability of products and customer satisfaction, Inventory management is a key strength for LEGO. It ensures that popular themes are available to meet demand while efficiently handling production and supply chains.).
+7.  The source for the dataset is TidyTuesday and this community has taken the liberty to aggregate that year’s releases into a publicly available dataset with the help of Rebrickable, who maintains and updates the Lego Parts/Sets/Colors and Inventories of every official LEGO set.
+8.  Beyond physical bricks, LEGO has expanded into digital games like LEGO Star Wars, LEGO Fortnite, movies, TV series, and the LEGO Ideas community platform.
+9.  The methodology includes exploring of the vast data, combinnig data-sets and also includes graphs to understand about themes of Lego set and gives complexity of LEGO from the beginning till date.
+10. 
+
+---
+
+## A.Executive Summary
+
+1.  This report explores the diversity and evolution of Lego sets using the 2022 TidyTuesday data-set which includes details like set numbers, themes, inventory list and number of parts
+
+2.  
+
+3.  By looking over the inventory list and the number of available theme sets, we identify the trends in Lego's product strategy and its expansion
+
+4.  To conclude, Lego's innovation is always expanding the they commit in engaging diverse audiences in the toy's industry by introducing more and more popular sets.
+
+    This report analyzes the 2022 TidyTuesday LEGO dataset to identify trends in themes, piece counts, inventory list . data-sets have been modified and joined together to have one main data file which contains all the details like inventory ID, the total quantity from one file and names of the theme, themeID and no. of parts for the theme.
+
+## B.Executive Summary
+
+1.  This report examines the 2022 TidyTuesday LEGO dataset which contains more than 1,100 official sets with metadata which can be used to identify year to year trends and get an idea of inventory management by Lego based on demand.
+2.  After data cleaning, combining and standardization, we produced a theme‐popularity bar chart and a chart with median number of parts over the year to understand trends in Lego themes and complexity in number of parts.
+3.  ....
+4.  We conclude that retailers and the LEGO Group prioritize promotional focus on these high-value themes and explore opportunities around fast growing themes.
+
+## C.Executive Summary
+
+1.  Using the 2022 TidyTuesday LEGO dataset of over 1,100 sets, we conducted a descriptive analysis to explore theme prevalence and set complexity over the years.
+2.  We implemented a data‐modification workflow which includes merging and cleaning of data-sets and generated two key visuals: a bar chart of theme release frequencies and a chart with complexity in number of parts over the years.
+3.  
+4.  We came to a conclusion that marketing and sales teams spotlight these high impact themes and test promotions for rising themes to stay where they are in the toy market
+
+------------------------------------------------------------------------
+
+LEGO is a globally recognized toy brand which leads the construction-toy market with a diverse array of sets released each year and TidyTuesday community has taken the liberty to aggregate that year’s releases into a publicly available dataset. This report gives an analysis of the popular themes, year on year trends and inventory management by Lego to full-fill its customers
+
+A small fact before we start -
+
+The analysis showed us that City and Star Wars are the most prolific and highest-revenue themes, whereas Creator Expert sets deliver the best parts-per-dollar ratio. The company even started smaller
