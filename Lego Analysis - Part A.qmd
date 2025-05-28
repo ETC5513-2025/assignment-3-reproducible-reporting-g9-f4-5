@@ -122,6 +122,28 @@ least_popular = set_themes |>
 least_popular
 ```
 
+### Most Popular LEGO Themes
+
+1.  Gear is the most popular LEGO theme of all time, with over 2,000 sets released. This category includes accessories like keychains, stationery, and other merchandise, showing strong demand for LEGO-branded items beyond traditional building sets.
+
+2.  Star Wars comes in second with over 1,000 sets. Thanks to its powerful movie franchise, this theme appeals to both young fans and adult collectors and has remained a top performer for decades.
+
+3.  Technic also has over 1,000 sets and is popular among those who enjoy engineering-style builds. It’s known for its complex mechanical features and realistic designs, attracting older children and adult hobbyists.
+
+4.  Other top themes include Key Chain, Friends, Books, and Basic Set, each with several hundred sets. This shows that LEGO successfully targets a variety of age groups and interests.
+
+### Least Popular LEGO Themes
+
+1.  Many themes, such as Zooters, X-Men, Wolfpack, and Stranger Things, have only 1 to 3 sets. These were likely experimental or niche product lines that did not gain enough traction to expand.
+
+2.  Themes like Sculptures, eLAB, and Miles From Tomorrowland may have targeted specialized audiences, but limited appeal resulted in minimal set releases.
+
+3.  Some licensed themes, such as The Powerpuff Girls, Fantastic Beasts, and Avatar: The Last Airbender, may have faced market or licensing challenges, preventing long-term success.
+
+### Conclusion
+
+The most successful LEGO themes share common features: strong brand identity, wide audience appeal, and ongoing product development.The least popular themes were often short-lived, targeted at small audiences, or limited by licensing.Understanding these patterns helps LEGO and similar brands plan better product strategies and maximize market impact.
+
 ```{r}
 theme_name_summary = set_themes |> 
   group_by(theme_name) |>
@@ -158,3 +180,25 @@ Which sets have the most parts
 ```{r}
 
 ```
+
+### Analysis: Complexity of LEGO Sets Over the Years
+
+1.  Early Years (1950s – early 1960s):
+
+The chart shows a large spike in the 1950s, likely due to an outlier set with many parts.Aside from this, most sets had a low median part count, suggesting simple designs.
+
+2.  Growth Phase (1960s – late 1970s):
+
+There was a clear upward trend in the median number of parts per set.This indicates that LEGO sets became more complex over time, possibly due to increased design innovation and consumer interest in more detailed builds.
+
+3.  Stabilization Period (1980s – 2020s):
+
+After peaking in the late 1970s, the median number of parts stabilized around 40–60 parts per set.Despite some fluctuations, no significant long-term increase is observed.
+
+4.  Recent Years (2000s – 2020s):
+
+Complexity remained steady, with occasional dips and rises.This suggests LEGO has balanced its product line with both simple and advanced sets.
+
+### Conclusion
+
+LEGO sets became more complex up to the late 1970s.Since then, the median complexity has plateaued, likely due to diversification of set sizes to meet the needs of different age groups and skill levels.
