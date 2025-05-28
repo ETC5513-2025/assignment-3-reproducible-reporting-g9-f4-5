@@ -1,0 +1,26 @@
+---
+title: "Lego Analysis"
+format: revealjs
+editor: visual
+---
+
+### Title - Brick by Brick, Lego Analysis
+
+#### Group Members:
+
+1.  William Tang
+2.  Prem MV
+3.  Rong Chen
+4.  Zhaoyu Zhang
+
+------------------------------------------------------------------------
+
+#### Problem Introduction
+
+1. 
+
+2.
+
+3.
+
+---
