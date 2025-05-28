@@ -92,7 +92,7 @@ most_popular
 least_popular
 ```
 
-###Most Popular LEGO Themes
+### Most Popular LEGO Themes
 
 1.  Gear is the most popular LEGO theme of all time, with over 2,000 sets released. This category includes accessories like keychains, stationery, and other merchandise, showing strong demand for LEGO-branded items beyond traditional building sets.
 
@@ -102,7 +102,7 @@ least_popular
 
 4.  Other top themes include Key Chain, Friends, Books, and Basic Set, each with several hundred sets. This shows that LEGO successfully targets a variety of age groups and interests.
 
-###Least Popular LEGO Themes
+### Least Popular LEGO Themes
 
 1.  Many themes, such as Zooters, X-Men, Wolfpack, and Stranger Things, have only 1 to 3 sets. These were likely experimental or niche product lines that did not gain enough traction to expand.
 
@@ -110,7 +110,7 @@ least_popular
 
 3.  Some licensed themes, such as The Powerpuff Girls, Fantastic Beasts, and Avatar: The Last Airbender, may have faced market or licensing challenges, preventing long-term success.
 
-###Conclusion
+### Conclusion
 
 The most successful LEGO themes share common features: strong brand identity, wide audience appeal, and ongoing product development.The least popular themes were often short-lived, targeted at small audiences, or limited by licensing.Understanding these patterns helps LEGO and similar brands plan better product strategies and maximize market impact.
 
@@ -138,7 +138,7 @@ part_year = set_themes |>
 part_year
 ```
 
-###Analysis: Complexity of LEGO Sets Over the Years
+### Analysis: Complexity of LEGO Sets Over the Years
 
 1.  Early Years (1950s – early 1960s):
 
@@ -156,8 +156,6 @@ After peaking in the late 1970s, the median number of parts stabilized around 40
 
 Complexity remained steady, with occasional dips and rises.This suggests LEGO has balanced its product line with both simple and advanced sets.
 
-###Conclusion
+### Conclusion
 
 LEGO sets became more complex up to the late 1970s.Since then, the median complexity has plateaued, likely due to diversification of set sizes to meet the needs of different age groups and skill levels.
-
-echo "<!-- edit by Rong in terminal -->" >> "Lego Analysis - Part A.qmd"
