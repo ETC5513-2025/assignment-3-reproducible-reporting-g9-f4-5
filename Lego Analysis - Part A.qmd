@@ -18,7 +18,7 @@ library(scales)
 library(kableExtra)
 ```
 
-Reading in dataset
+Reading in dataset directly from tidytuesday
 
 ```{r}
 #| message: false
