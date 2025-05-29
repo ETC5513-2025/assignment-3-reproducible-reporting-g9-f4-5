@@ -17,15 +17,15 @@ editor: visual
 
 #### Introduction
 
-**Origins & Innovation** - Founded in Billund, Denmark (1934) by Ole Kirk Christiansen, LEGO evolved from wooden toys to patented self-blocking bricks in the 1950s after getting introduced to Kiddi-craft also know as Self blocking Bricks.
+**Origins & Innovation** - Billund, Denmark (1934) - Ole Kirk Christiansen.
 
-**Our Approach** - Using the 2022 TidyTuesday dataset via Rebrickable, we clean and aggregate metadata, then visualize theme release trends, parts set complexity and trends in colour complexity.
+**Our Approach** - 2022 TidyTuesday dataset via Rebrickable
 
-**Global Expansion** - Lego’s portfolio includes licensed themes and its first store open in Sydney (1984); the largest set now contains 11,695 pieces World Map and suprisingly the most colour used in this theme is white.
+**Global Expansion** - First store open in Sydney (1984)
 
-**Brand Diversification** - Beyond bricks, Lego also entered digital games like LEGO Star Wars, LEGO Fortnite and even movies, TV series.
+**Brand Diversification** - Beyond bricks, also entered digital games like LEGO Star Wars, LEGO Fortnite and even movies, TV series.
 
----
+------------------------------------------------------------------------
 
 #### Data-set Overview
 
@@ -37,12 +37,12 @@ editor: visual
 
 ------------------------------------------------------------------------
 
-#### Problem Introduction
+#### Analysis Questions
 
-1.  
+1.  Which was the most popular and least popular theme in Lego?
 
-2.  
+2.  How has the complexity in number of parts changed over the years?
 
-3.  
+3.  Lego has a vast number of themes, what was the colour complexity trend over the years in their themes.
 
 ------------------------------------------------------------------------
