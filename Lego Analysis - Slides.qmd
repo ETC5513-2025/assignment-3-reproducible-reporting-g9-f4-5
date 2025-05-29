@@ -15,12 +15,34 @@ editor: visual
 
 ------------------------------------------------------------------------
 
-#### Problem Introduction
+#### Introduction
 
-1. 
+**Origins & Innovation** - Founded in Billund, Denmark (1934) by Ole Kirk Christiansen, LEGO evolved from wooden toys to patented self-blocking bricks in the 1950s after getting introduced to Kiddi-craft also know as Self blocking Bricks.
 
-2.
+**Our Approach** - Using the 2022 TidyTuesday dataset via Rebrickable, we clean and aggregate metadata, then visualize theme release trends, parts set complexity and trends in colour complexity.
 
-3.
+**Global Expansion** - Lego’s portfolio includes licensed themes and its first store open in Sydney (1984); the largest set now contains 11,695 pieces World Map and suprisingly the most colour used in this theme is white.
+
+**Brand Diversification** - Beyond bricks, Lego also entered digital games like LEGO Star Wars, LEGO Fortnite and even movies, TV series.
 
 ---
+
+#### Data-set Overview
+
+-   **Source:** TidyTuesday 2022 LEGO dataset - Rebrickable API).
+
+-   **Fields:** Theme, release year and piece count.
+
+-   **Scope:** No sales or revenue data—only set metadata.
+
+------------------------------------------------------------------------
+
+#### Problem Introduction
+
+1.  
+
+2.  
+
+3.  
+
+------------------------------------------------------------------------
