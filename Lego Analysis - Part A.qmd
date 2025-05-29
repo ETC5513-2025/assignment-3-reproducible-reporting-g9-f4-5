@@ -267,35 +267,29 @@ yearly_summary_plot = ggplot(yearly_summary, aes(x = year, y = unique_colors)) +
 
 yearly_summary_plot
 ```
-  
+
 ### Analysis: Diversity of Colors and Set Complexity in LEGO Over the Years
 
-1.   Color Diversity Has Increased Significantly Over Time:
+1.  Color Diversity Has Increased Significantly Over Time:
 
-In the early years (1950s–1980s), the number of unique colors remained low and stable, generally below 30.
-A sharp increase in color variety began around the mid-1990s, peaking around 2005 with over 100 unique colors.
-This rise reflects LEGO’s expansion into more diverse and creative themes, such as Star Wars, Friends, and Ninjago.
+In the early years (1950s–1980s), the number of unique colors remained low and stable, generally below 30. A sharp increase in color variety began around the mid-1990s, peaking around 2005 with over 100 unique colors. This rise reflects LEGO’s expansion into more diverse and creative themes, such as Star Wars, Friends, and Ninjago.
 
 2.  Modern LEGO Sets Offer a Wider Visual Palette:
 
-Since 2000, the trend has stabilized but remains at a much higher level of color diversity than earlier decades.
-The sustained use of 60–80 unique colors in recent years suggests a commitment to more visually rich and customizable sets, appealing to both children and adult collectors.
+Since 2000, the trend has stabilized but remains at a much higher level of color diversity than earlier decades. The sustained use of 60–80 unique colors in recent years suggests a commitment to more visually rich and customizable sets, appealing to both children and adult collectors.
 
-3. Color Complexity Supports Build Complexity :
+3.  Color Complexity Supports Build Complexity :
 
-The increase in median parts per set (as seen in earlier graphs) correlates with increased color variety.
-More colors allow for greater detail, theme accuracy, and differentiation of components, which enhances both aesthetic and functional complexity.
+The increase in median parts per set (as seen in earlier graphs) correlates with increased color variety. More colors allow for greater detail, theme accuracy, and differentiation of components, which enhances both aesthetic and functional complexity.
 
 4.  Design and Brand Evolution
 
-The introduction of licensed sets (e.g., Harry Potter, Marvel) demands specific color palettes, further driving color diversity.
-Customization and modular building trends also push LEGO to expand its available color options for builders.
+The introduction of licensed sets (e.g., Harry Potter, Marvel) demands specific color palettes, further driving color diversity. Customization and modular building trends also push LEGO to expand its available color options for builders.
 
 ### Conclusion
 
 The growing number of unique colors used in LEGO sets is a strong indicator of increased design sophistication and build complexity. Color diversity not only enhances the visual experience, but also plays a critical role in enabling LEGO’s modern design capabilities and supporting more engaging, realistic, and intricate builds.
- 
-  
+
 Which sets have the most parts and the proportion of colours
 
 ```{r}
@@ -366,21 +360,15 @@ top_20_plot
 
 1.  Sets with the Highest Number of Parts:
 
-World Map is the LEGO set with the most parts, exceeding 11,000 pieces. Its design focuses heavily on tile placement and color detail.
-NINJAGO City Gardens and The Ultimate Battle for Chima also rank highly, each containing around 5,500 to 6,000 pieces, showcasing advanced structural and decorative elements.
-Other large sets include Titanic, Colosseum, and Tower Bridge, each with over 9,000 pieces, reflecting highly detailed architectural builds.
+World Map is the LEGO set with the most parts, exceeding 11,000 pieces. Its design focuses heavily on tile placement and color detail. NINJAGO City Gardens and The Ultimate Battle for Chima also rank highly, each containing around 5,500 to 6,000 pieces, showcasing advanced structural and decorative elements. Other large sets include Titanic, Colosseum, and Tower Bridge, each with over 9,000 pieces, reflecting highly detailed architectural builds.
 
 2.  Color Proportions and Variety:
 
-Sets like World Map and Tree House show high color diversity, using dozens of different shades to depict natural or geographic details.
-In contrast, Liebherr R 9800 Excavator, Bugatti Chiron, and Lamborghini Sián use a more concentrated color palette, focused on realism and technical detail (e.g., grey, black, yellow, blue).
-Star Wars sets like the Millennium Falcon, Death Star, and Imperial Star Destroyer are dominated by grey tones, consistent with their on-screen designs.
+Sets like World Map and Tree House show high color diversity, using dozens of different shades to depict natural or geographic details. In contrast, Liebherr R 9800 Excavator, Bugatti Chiron, and Lamborghini Sián use a more concentrated color palette, focused on realism and technical detail (e.g., grey, black, yellow, blue). Star Wars sets like the Millennium Falcon, Death Star, and Imperial Star Destroyer are dominated by grey tones, consistent with their on-screen designs.
 
 3.  Function vs. Aesthetic Balance:
 
-Some sets prioritize aesthetic variety (e.g., World Map, Tree House) and thus have many colors but simpler build structures.
-Others focus on mechanical or architectural complexity (e.g., AT–AT, Excavator), using fewer colors but highly technical builds with intricate mechanisms.
-
+Some sets prioritize aesthetic variety (e.g., World Map, Tree House) and thus have many colors but simpler build structures. Others focus on mechanical or architectural complexity (e.g., AT–AT, Excavator), using fewer colors but highly technical builds with intricate mechanisms.
 
 ### Conclusion
 
