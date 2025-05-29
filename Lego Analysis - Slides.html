@@ -28,7 +28,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="Lego Analysis - Slides_files/libs/revealjs/dist/theme/quarto-2f366650f320edcfcf53d73c80250a32.css">
+  <link rel="stylesheet" href="Lego Analysis - Slides_files/libs/revealjs/dist/theme/quarto-0c22b6e252e162282a19289aa8a4686d.css">
   <link href="Lego Analysis - Slides_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="Lego Analysis - Slides_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="Lego Analysis - Slides_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -134,7 +134,8 @@
 </section>
 <section class="slide level2">
 
-<h3 id="title---brick-by-brick-lego-analysis">Title - Brick by Brick, Lego Analysis</h3>
+<h3 id="legos-evolution-insights-into-theme-popularity-and-set-complexity">LEGO’s evolution: Insights into theme popularity and set complexity</h3>
+<p><br><br></p>
 <h4 id="group-members">Group Members:</h4>
 <ol type="1">
 <li>William Tang</li>
@@ -146,10 +147,10 @@
 <section class="slide level2">
 
 <h4 id="introduction">Introduction</h4>
-<p><strong>Origins &amp; Innovation</strong> - Founded in Billund, Denmark (1934) by Ole Kirk Christiansen, LEGO evolved from wooden toys to patented self-blocking bricks in the 1950s after getting introduced to Kiddi-craft also know as Self blocking Bricks.</p>
-<p><strong>Our Approach</strong> - Using the 2022 TidyTuesday dataset via Rebrickable, we clean and aggregate metadata, then visualize theme release trends, parts set complexity and trends in colour complexity.</p>
-<p><strong>Global Expansion</strong> - Lego’s portfolio includes licensed themes and its first store open in Sydney (1984); the largest set now contains 11,695 pieces World Map and suprisingly the most colour used in this theme is white.</p>
-<p><strong>Brand Diversification</strong> - Beyond bricks, Lego also entered digital games like LEGO Star Wars, LEGO Fortnite and even movies, TV series.</p>
+<p><strong>Origins &amp; Innovation</strong> - Billund, Denmark (1934) - Ole Kirk Christiansen.</p>
+<p><strong>Our Approach</strong> - 2022 TidyTuesday dataset via Rebrickable</p>
+<p><strong>Global Expansion</strong> - First store open in Sydney (1984)</p>
+<p><strong>Brand Diversification</strong> - Beyond bricks, also entered digital games like LEGO Star Wars, LEGO Fortnite and even movies, TV series.</p>
 </section>
 <section class="slide level2">
 
@@ -162,15 +163,58 @@
 </section>
 <section class="slide level2">
 
-<h4 id="problem-introduction">Problem Introduction</h4>
+<h4 id="analysis-questions">Analysis Questions</h4>
 <ol type="1">
-<li></li>
-<li></li>
-<li></li>
+<li><p>What were the most popular and least popular themes in LEGO?</p></li>
+<li><p>How has the complexity of LEGO sets changed over the years?</p></li>
+<li><p>What are the largest LEGO sets available officially?</p></li>
 </ol>
 </section>
 <section class="slide level2">
 
+<h4 id="methodology">Methodology</h4>
+<ul>
+<li><p>Used TidyTuesday LEGO dataset from Rebrickable (theme names, part counts, colour and year)</p></li>
+<li><p>Filtered out sets with missing or zero part counts</p></li>
+<li><p>Initial exploration @fig-theme_by_parts</p></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<div class="columns">
+<h4 id="theme-popularity">Theme popularity</h4>
+<div class="column" style="width:50%;">
+<ul>
+<li><p>Grouped sets by theme and calculated set count and median part count @fig-most_popular &amp; @fig-least_popular</p></li>
+<li><p>Top 20 most and least popular themes</p></li>
+<li><p>Bar length = # of sets, fill = median parts count</p></li>
+</ul>
+</div></div>
+</section>
+<section class="slide level2">
+
+<div class="columns">
+<h4 id="trend-over-time">Trend over time</h4>
+<div class="column" style="width:50%;">
+<ul>
+<li>Analysed median part counts and colour diversity by year @fig-parts_trend &amp; @fig-color_diversity</li>
+</ul>
+<!-- -->
+<ul>
+<li>Trend line added for better visibility</li>
+</ul>
+</div></div>
+</section>
+<section class="slide level2">
+
+<div class="columns">
+<h4 id="largest-sets-analysis">Largest Sets Analysis</h4>
+<div class="column">
+<ul>
+<li><p>Top 20 largest sets by part count</p></li>
+<li><p>Bars segmented by actual hex colours to show colour usage per set</p></li>
+</ul>
+</div></div>
 
 </section>
     </div>
@@ -229,7 +273,7 @@
         progress: true,
 
         // Display the page number of the current slide
-        slideNumber: false,
+        slideNumber: 'c/t',
 
         // 'all', 'print', or 'speaker'
         showSlideNumber: 'all',
@@ -334,7 +378,7 @@
         previewLinks: false,
 
         // Transition style (none/fade/slide/convex/concave/zoom)
-        transition: 'none',
+        transition: 'fade',
 
         // Transition speed (default/fast/slow)
         transitionSpeed: 'default',

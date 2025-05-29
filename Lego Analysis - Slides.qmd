@@ -1,10 +1,17 @@
 ---
 title: "Lego Analysis"
-format: revealjs
+format: 
+  revealjs:
+    theme: sky
+    slideNumber: true
+    fontSize: 18
+    transition: fade
 editor: visual
 ---
 
-### Title - Brick by Brick, Lego Analysis
+### LEGO's evolution: Insights into theme popularity and set complexity
+
+<br><br>
 
 #### Group Members:
 
@@ -39,10 +46,58 @@ editor: visual
 
 #### Analysis Questions
 
-1.  Which was the most popular and least popular theme in Lego?
+1.  What were the most popular and least popular themes in LEGO?
 
-2.  How has the complexity in number of parts changed over the years?
+2.  How has the complexity of LEGO sets changed over the years?
 
-3.  Lego has a vast number of themes, what was the colour complexity trend over the years in their themes.
+3.  What are the largest LEGO sets available officially?
 
 ------------------------------------------------------------------------
+
+#### Methodology
+
+-   Used TidyTuesday LEGO dataset from Rebrickable (theme names, part counts, colour and year)
+
+-   Filtered out sets with missing or zero part counts
+
+-   Initial exploration \@fig-theme_by_parts
+
+------------------------------------------------------------------------
+
+:::: columns
+#### Theme popularity
+
+::: {.column width="50%"}
+-   Grouped sets by theme and calculated set count and median part count \@fig-most_popular & \@fig-least_popular
+
+-   Top 20 most and least popular themes
+
+-   Bar length = \# of sets, fill = median parts count
+:::
+::::
+
+------------------------------------------------------------------------
+
+:::: columns
+#### Trend over time
+
+::: {.column width="50%"}
+-   Analysed median part counts and colour diversity by year \@fig-parts_trend & \@fig-color_diversity
+
+<!-- -->
+
+-   Trend line added for better visibility
+:::
+::::
+
+------------------------------------------------------------------------
+
+:::: columns
+#### Largest Sets Analysis
+
+::: column
+-   Top 20 largest sets by part count
+
+-   Bars segmented by actual hex colours to show colour usage per set
+:::
+::::
