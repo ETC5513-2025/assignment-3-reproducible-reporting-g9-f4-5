@@ -1,5 +1,5 @@
 ---
-title: "Part A - Lego Analysis"
+title: "Lego Analysis"
 format: pdf
 editor: visual
 ---
@@ -73,6 +73,8 @@ theme_name_summary = set_themes |>
 
 
 theme_summary = knitr::kable(theme_name_summary, caption = "Theme ordered by sets with their median parts", row.names = FALSE)
+
+theme_summary
 ```
 
 Could even do a correlation analysis to check whether it is true that the more sets produced the lesser parts there are
