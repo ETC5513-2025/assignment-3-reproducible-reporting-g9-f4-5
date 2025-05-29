@@ -1,0 +1,32 @@
+---
+title: "Lego Analysis"
+format: pdf
+editor: visual
+---
+
+### Discussion
+
+Based on @fig-most_popular and @fig-least_popular, it can be seen that the more popular themes have on average significantly fewer parts in comparison to the least popular themes. This indicates that accessibility, simplicity, and recognizability may play a more important role in determining a theme's success, rather than set complexity alone. Simpler sets can appeal to more customers, especially younger children and first time taster, making them more commercially successful.
+
+```{r}
+#| message: false
+#| warning: false
+
+# Creating correlation dataframe
+theme_correlation = set_themes |> 
+  group_by(theme_name) |>
+  summarize(n_sets = n(), 
+            median_parts = median(num_parts, na.rm = TRUE), 
+            .groups = "drop")|>
+  filter(!is.na(median_parts))
+
+# Calculate correlation
+correlation_result = cor(theme_correlation$n_sets, 
+                         theme_correlation$median_parts, 
+                         method = "pearson")
+correlation_result
+```
+
+However, the correlation analysis between the number of sets in each theme and the median number of parts per set produced a Pearson correlation coefficient of -0.08. This indicates a very weak negative correlation, meaning there is little to no linear relationship between a theme's popularity (number of sets) and the complexity of its sets (median parts count). In other words, while popular themes often feature smaller sets, the number of sets in a theme does not strongly predict the typical complexity of those sets. In terms of inventory management, the production of simple sets within existing themes can help to boost sales.
+
+Overall, the finding is aimed to emphasize that simplicity and accessibility are key factors of Lego theme popularity.
