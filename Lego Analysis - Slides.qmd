@@ -281,7 +281,7 @@ top_20_plot = ggplot(top_20_data,
 
 ------------------------------------------------------------------------
 
-#### Data-set Overview
+#### Data-set Overview:
 
 -   **Source:** TidyTuesday 2022 LEGO dataset - Rebrickable.
 
