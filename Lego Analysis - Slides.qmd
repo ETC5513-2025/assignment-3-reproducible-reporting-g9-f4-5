@@ -295,17 +295,16 @@ top_20_plot = ggplot(top_20_data,
 
 #### Data-set Overview
 
-- **Source:** TidyTuesday 2022 LEGO dataset - Rebrickable.
+-   **Source:** TidyTuesday 2022 LEGO dataset - Rebrickable.
 
-- **Description:**
+-   **Description:**
 
-  - Themes & Colours  
-  - Sets & Release year  
-  - Number of parts per set  
-  - Inventory & Parts
-  
-- **Scope:** No sales or revenue data—only set metadata.
+    -   Themes & Colours\
+    -   Sets & Release year\
+    -   Number of parts per set\
+    -   Inventory & Parts
 
+-   **Scope:** No sales or revenue data—only set metadata.
 
 ------------------------------------------------------------------------
 
@@ -441,19 +440,19 @@ top_20_plot
 
 ::::: columns
 #### Results: Most popular and least popular LEGO themes
+
 ::: {.column width="50%" style="font-size: 0.7em;"}
-**Most popular**  
+**Most popular**
 
--   Strong brand identity  
--   Wide audience appeal  
--   Ongoing product development  
+-   Strong brand identity\
+-   Wide audience appeal\
+-   Ongoing product development
 
-**Least popular** 
+**Least popular**
 
--   Short lived  
--   Targeted at small audiences  
--   Limited by licensing  
-
+-   Short lived\
+-   Targeted at small audiences\
+-   Limited by licensing
 :::
 
 ::: {.column width="50%"}
@@ -522,8 +521,8 @@ yearly_summary_plot
 #### Results: Sets with the most parts and color proportions
 
 ::: {.column width="50%" style="font-size: 0.7em;"}
-- The number of parts in a LEGO set often correlates with either extensive design detail or technical function
-- Some sets aim for vibrant storytelling vs precision and realism
+-   The number of parts in a LEGO set often correlates with either extensive design detail or technical function
+-   Some sets aim for vibrant storytelling vs precision and realism
 :::
 
 ::: {.column width="50%"}
@@ -542,25 +541,25 @@ top_20_plot
 
 ------------------------------------------------------------------------
 
-#### Further findings
+#### Results - Extra Discussion
 
 More popular themes have on average significantly fewer parts in comparison to the least popular themes
 
-- Accessibility
-- Simplicity
-- Recognisability
-- Rather than set complexity alone
+-   Accessibility
+-   Simplicity
+-   Recognisability
+-   Rather than set complexity alone
 
 Simpler sets can appeal to more customers, making them more commercially successful
 
 ------------------------------------------------------------------------
 
-#### Further findings
+#### Results - Extra Discussion
 
 Correlation analysis returned -0.08
 
-- Very weak negative correlation
-- Little to no linear relationship between a theme's popularity and complexity of its sets
+-   Very weak negative correlation
+-   Little to no linear relationship between a theme's popularity and complexity of its sets
 
 Finding is aimed to emphasize simplicity and accessibility are important factors of Lego theme popularity
 
@@ -568,11 +567,10 @@ Finding is aimed to emphasize simplicity and accessibility are important factors
 
 #### Conclusion
 
-- There are themes that LEGO focuses more on producing
-- LEGO is definitely getting more complex as the years go on
-- LEGO's most successful themes strike balance between accessibility and innovation, highlighting the importance of thoughtful design over sheer complexity
+-   There are themes that LEGO focuses more on producing
+-   LEGO is definitely getting more complex as the years go on
+-   LEGO's most successful themes strike balance between accessibility and innovation, highlighting the importance of thoughtful design over sheer complexity
 
 ------------------------------------------------------------------------
-
 
 ## Thanks!
