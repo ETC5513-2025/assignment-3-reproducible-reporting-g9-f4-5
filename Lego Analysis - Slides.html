@@ -9,7 +9,7 @@
 <link href="Lego Analysis - Slides_files/libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.6.42">
 
-  <title>Lego Analysis</title>
+  <title>lego-analysis---slides</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -125,13 +125,7 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Lego Analysis</h1>
 
-<div class="quarto-title-authors">
-</div>
-
-</section>
 <section class="slide level2">
 
 <h3 id="legos-evolution-insights-into-theme-popularity-and-set-complexity">LEGO’s evolution: Insights into theme popularity and set complexity</h3>
@@ -146,29 +140,34 @@
 </section>
 <section class="slide level2">
 
-<h4 id="data-set-overview">Data-set Overview</h4>
+<div class="column" style="font-size: 0.7em;">
+<h4 id="data-set-overview">Data-set Overview:</h4>
 <ul>
 <li><p><strong>Source:</strong> TidyTuesday 2022 LEGO dataset - Rebrickable.</p></li>
-<li><p><strong>Description: a.</strong>Themes &amp; Colours b.Sets &amp; Release year c.Number of parts per set</p></li>
+<li><p><strong>Description:<br>
+a.</strong>Themes &amp; Colours<br>
+b.Sets &amp; Release year<br>
+c.Number of parts per set</p></li>
 <li><p>Inventory &amp; Parts</p></li>
 <li><p><strong>Scope:</strong> No sales or revenue data—only set metadata.</p></li>
 </ul>
+</div><div class="column" style="font-size: 0.7em;">
 <h4 id="analysis-questions">Analysis Questions</h4>
-<p>1.What were the most popular and least popular themes in LEGO? 2.How has the complexity of LEGO sets changed over the years? 3.What are the largest LEGO sets available officially?</p>
-</section>
+<p>1.What were the most popular and least popular themes in LEGO?</p>
+<p>2.How has the complexity of LEGO sets changed over the years?</p>
+<p>3.What are the largest LEGO sets available officially?</p>
+</div></section>
 <section class="slide level2">
 
 <div class="columns">
-<h4 id="methodology">Methodology</h4>
+<h4 id="methodology-theme-popularity">Methodology: Theme popularity</h4>
 <div class="column" style="font-size: 0.7em;">
 <ul>
-<li>Used TidyTuesday LEGO dataset from Rebrickable</li>
-<li>Filtered sets with missing or zero part counts</li>
-<li>Initial exploration: number of sets by theme and median part count</li>
+<li>Grouped sets by theme and calculated set count and median part count</li>
+<li>Top 20 most and least popular themes</li>
+<li>Bar length = # of sets, fill = median parts count</li>
 </ul>
-</div><div class="column" style="font-size: 0.55em;">
 <table class="caption-top">
-<caption>Theme ordered by sets with their median parts</caption>
 <thead>
 <tr class="header">
 <th style="text-align: left;">theme_name</th>
@@ -202,51 +201,14 @@
 <td style="text-align: right;">439</td>
 <td style="text-align: right;">52</td>
 </tr>
-<tr class="even">
-<td style="text-align: left;">Supplemental</td>
-<td style="text-align: right;">431</td>
-<td style="text-align: right;">12</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Gear</td>
-<td style="text-align: right;">409</td>
-<td style="text-align: right;">15</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Classic Town</td>
-<td style="text-align: right;">394</td>
-<td style="text-align: right;">66</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Town</td>
-<td style="text-align: right;">374</td>
-<td style="text-align: right;">20</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Bionicle</td>
-<td style="text-align: right;">357</td>
-<td style="text-align: right;">43</td>
-</tr>
 </tbody>
 </table>
-</div></div>
-</section>
-<section class="slide level2">
-
-<div class="columns">
-<h4 id="theme-popularity">Theme popularity</h4>
-<div class="column" style="font-size: 0.7em;">
-<ul>
-<li>Grouped sets by theme and calculated set count and median part count</li>
-<li>Top 20 most and least popular themes</li>
-<li>Bar length = # of sets, fill = median parts count</li>
-</ul>
 </div><div class="column" style="width:50%;">
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="Lego-Analysis---Slides_files/figure-revealjs/unnamed-chunk-11-1.png" width="528"></p>
+<p><img data-src="Lego-Analysis---Slides_files/figure-revealjs/unnamed-chunk-2-1.png" width="528"></p>
 </figure>
 </div>
 </div>
@@ -255,7 +217,7 @@
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="Lego-Analysis---Slides_files/figure-revealjs/unnamed-chunk-12-1.png" width="528"></p>
+<p><img data-src="Lego-Analysis---Slides_files/figure-revealjs/unnamed-chunk-3-1.png" width="528"></p>
 </figure>
 </div>
 </div>
@@ -265,7 +227,7 @@
 <section class="slide level2">
 
 <div class="columns">
-<h4 id="trend-over-time">Trend over time</h4>
+<h4 id="methodology-trend-over-time">Methodology: Trend over time</h4>
 <div class="column" style="font-size: 0.7em;">
 <ul>
 <li>Analysed median part counts and colour diversity by year</li>
@@ -296,7 +258,7 @@
 <section class="slide level2">
 
 <div class="columns">
-<h4 id="largest-sets-analysis">Largest Sets Analysis</h4>
+<h4 id="methodology-largest-sets-analysis">Methodology: Largest Sets Analysis</h4>
 <div class="column" style="font-size: 0.7em;">
 <ul>
 <li>Top 20 largest LEGO sets by part count</li>
@@ -341,7 +303,7 @@
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="Lego-Analysis---Slides_files/figure-revealjs/unnamed-chunk-16-1.png" width="528"></p>
+<p><img data-src="Lego-Analysis---Slides_files/figure-revealjs/unnamed-chunk-4-1.png" width="528"></p>
 </figure>
 </div>
 </div>
@@ -350,7 +312,7 @@
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="Lego-Analysis---Slides_files/figure-revealjs/unnamed-chunk-17-1.png" width="528"></p>
+<p><img data-src="Lego-Analysis---Slides_files/figure-revealjs/unnamed-chunk-5-1.png" width="528"></p>
 </figure>
 </div>
 </div>
@@ -412,6 +374,7 @@
 </section>
 <section class="slide level2">
 
+<div class="column" style="font-size: 0.7em;">
 <h4 id="results---extra-discussion">Results - Extra Discussion</h4>
 <p>More popular themes have on average significantly fewer parts in comparison to the least popular themes</p>
 <ul>
@@ -421,17 +384,15 @@
 <li>Rather than set complexity alone</li>
 </ul>
 <p>Simpler sets can appeal to more customers, making them more commercially successful</p>
-</section>
-<section class="slide level2">
-
-<h4 id="results---extra-discussion-1">Results - Extra Discussion</h4>
+</div><div class="column" style="font-size: 0.7em;">
+<p><br><br></p>
 <p>Correlation analysis returned -0.08</p>
 <ul>
 <li>Very weak negative correlation</li>
 <li>Little to no linear relationship between a theme’s popularity and complexity of its sets</li>
 </ul>
 <p>Finding is aimed to emphasize simplicity and accessibility are important factors of Lego theme popularity</p>
-</section>
+</div></section>
 <section class="slide level2">
 
 <h4 id="conclusion">Conclusion</h4>
@@ -440,9 +401,6 @@
 <li>LEGO is definitely getting more complex as the years go on</li>
 <li>LEGO’s most successful themes strike balance between accessibility and innovation, highlighting the importance of thoughtful design over sheer complexity</li>
 </ul>
-</section>
-<section id="section" class="slide level2">
-<h2></h2>
 
 </section>
     </div>
@@ -661,42 +619,80 @@
       });
     </script>
     
+
     <script>
+
       // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+
       // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+
       // slide changes (different for each slide format).
+
       (function () {
+
         // dispatch for htmlwidgets
+
         function fireSlideEnter() {
+
           const event = window.document.createEvent("Event");
+
           event.initEvent("slideenter", true, true);
+
           window.document.dispatchEvent(event);
+
         }
+
+    
 
         function fireSlideChanged(previousSlide, currentSlide) {
+
           fireSlideEnter();
 
+    
+
           // dispatch for shiny
+
           if (window.jQuery) {
+
             if (previousSlide) {
+
               window.jQuery(previousSlide).trigger("hidden");
+
             }
+
             if (currentSlide) {
+
               window.jQuery(currentSlide).trigger("shown");
+
             }
+
           }
+
         }
+
+    
 
         // hookup for slidy
+
         if (window.w3c_slidy) {
+
           window.w3c_slidy.add_observer(function (slide_num) {
+
             // slide_num starts at position 1
+
             fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+
           });
+
         }
 
+    
+
       })();
+
     </script>
+
+    
 
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
