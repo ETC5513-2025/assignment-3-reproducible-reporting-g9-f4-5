@@ -285,22 +285,18 @@ top_20_plot = ggplot(top_20_data,
 
 -   **Source:** TidyTuesday 2022 LEGO dataset - Rebrickable.
 
--   **Description:**
+-   **Description:\
+    a.**Themes & Colours\
+    b.Sets & Release year\
+    c.Number of parts per set
 
-    -   Themes & Colours\
-    -   Sets & Release year\
-    -   Number of parts per set\
-    -   Inventory & Parts
+-   Inventory & Parts
 
 -   **Scope:** No sales or revenue data—only set metadata.
 
-------------------------------------------------------------------------
-
 #### Analysis Questions
 
-1.  What were the most popular and least popular themes in LEGO?
-2.  How has the complexity of LEGO sets changed over the years?
-3.  What are the largest LEGO sets available officially?
+1.What were the most popular and least popular themes in LEGO? 2.How has the complexity of LEGO sets changed over the years? 3.What are the largest LEGO sets available officially?
 
 ------------------------------------------------------------------------
 
