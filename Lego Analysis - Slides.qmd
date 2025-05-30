@@ -281,18 +281,6 @@ top_20_plot = ggplot(top_20_data,
 
 ------------------------------------------------------------------------
 
-#### Introduction
-
-**Origins & Innovation** - Billund, Denmark (1934) - Ole Kirk Christiansen.
-
-**Our Approach** - 2022 TidyTuesday dataset via Rebrickable
-
-**Global Expansion** - First store open in Sydney (1984)
-
-**Brand Diversification** - Beyond bricks, also entered digital games like LEGO Star Wars, LEGO Fortnite and even movies, TV series.
-
-------------------------------------------------------------------------
-
 #### Data-set Overview
 
 -   **Source:** TidyTuesday 2022 LEGO dataset - Rebrickable.
@@ -573,4 +561,4 @@ Finding is aimed to emphasize simplicity and accessibility are important factors
 
 ------------------------------------------------------------------------
 
-## Thanks!
+## 
