@@ -285,12 +285,12 @@ top_20_plot = ggplot(top_20_data,
 
 -   **Source:** TidyTuesday 2022 LEGO dataset - Rebrickable.
 
--   **Description:\
-    a.**Themes & Colours\
+-   **Description:**\
+    a.Themes & Colours\
     b.Sets & Release year\
     c.Number of parts per set
 
--   Inventory & Parts
+-   **Inventory & Parts**
 
 -   **Scope:** No sales or revenue data—only set metadata.
 :::
@@ -314,6 +314,7 @@ top_20_plot = ggplot(top_20_data,
 -   Grouped sets by theme and calculated set count and median part count
 -   Top 20 most and least popular themes
 -   Bar length = \# of sets, fill = median parts count
+
 ```{r}
 #| echo: false
 #| results: asis
@@ -462,7 +463,7 @@ least_popular_plot
 -   LEGO sets became more complex up to the late 1970s
 -   Median complexity has plateaued since then
 -   Diversification of set sizes to meet the needs of different age groups and skill levels
--   strong indicator of increased design sophistication and build complexity
+-   Strong indicator of increased design sophistication and build complexity
 :::
 
 ::: {.column width="50%"}
@@ -514,10 +515,7 @@ top_20_plot
 :::
 :::::
 
-
 ------------------------------------------------------------------------
-
-
 
 ::: {.column width="50%" style="font-size: 0.7em;"}
 #### Results - Extra Discussion
