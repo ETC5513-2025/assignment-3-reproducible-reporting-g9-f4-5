@@ -68,7 +68,7 @@ Finally, to explore the largest sets every produced by LEGO, a bar chart @fig-mo
 
 ------------------------------------------------------------------------
 
-### Results:
+
 
 **Theme popularity** - based on the number of sets released under each theme. More sets = more popular
 
@@ -294,95 +294,36 @@ top_20_plot
 # rm(colors, least_popular, most_popular, part_year, parts, yearly_summary, theme_name_summary, theme_correlations, sets, parts, inventory_parts, set_parts_colors, set_themes, set_total_parts, theme_correlation, themes, inventories, top_20_data)
 ```
 
-#### Most Popular LEGO Themes
+------------------------------------------------------------------------
 
-1.  Technic is the most popular LEGO theme of all time, with over 800 sets released and is popular among those who enjoy engineering-style builds. It’s known for its complex mechanical features and realistic designs, attracting older children and adult hobbyists.
+### Results:
 
-2.  Star Wars comes in second with almost 800 sets. Thanks to its powerful movie franchise, this theme appeals to both young fans and adult collectors and has remained a top performer for decades.
-
-3.  Other top themes include Friends, Ninjago and Basic Set, each with several hundred sets. This shows that LEGO successfully targets a variety of age groups and interests.
-
-#### Least Popular LEGO Themes
-
-1.  Many themes, such as Zooters, X-Men, Wolfpack, and Stranger Things, have only 1 to 3 sets. These were likely experimental or niche product lines that did not gain enough traction to expand.
-
-2.  Themes like Sculptures, eLAB, and Miles From Tomorrowland may have targeted specialized audiences, but limited appeal resulted in minimal set releases.
-
-3.  Some licensed themes, such as The Powerpuff Girls, Fantastic Beasts, and Avatar: The Last Airbender, may have faced market or licensing challenges, preventing long-term success.
-
-#### Conclusion
+1.  Most Popular and least Popular LEGO Themes (@fig-most_popular & @fig-least_popular)
 
 The most successful LEGO themes share common features: strong brand identity, wide audience appeal, and ongoing product development.The least popular themes were often short-lived, targeted at small audiences, or limited by licensing.Understanding these patterns helps LEGO and similar brands plan better product strategies and maximize market impact.
 
-#### Analysis: Complexity of LEGO Sets Over the Years
-
-1.  Early Years (1950s – early 1960s):
-
-The chart shows a large spike in the 1950s, likely due to an outlier set with many parts.Aside from this, most sets had a low median part count, suggesting simple designs.
-
-2.  Growth Phase (1960s – late 1970s):
-
-There was a clear upward trend in the median number of parts per set.This indicates that LEGO sets became more complex over time, possibly due to increased design innovation and consumer interest in more detailed builds.
-
-3.  Stabilization Period (1980s – 2020s):
-
-After peaking in the late 1970s, the median number of parts stabilized around 40–60 parts per set.Despite some fluctuations, no significant long-term increase is observed.
-
-4.  Recent Years (2000s – 2020s):
-
-Complexity remained steady, with occasional dips and rises.This suggests LEGO has balanced its product line with both simple and advanced sets.
-
-#### Conclusion
+2.  Complexity of LEGO Sets Over the Years (@fig-parts_trend)
 
 LEGO sets became more complex up to the late 1970s.Since then, the median complexity has plateaued, likely due to diversification of set sizes to meet the needs of different age groups and skill levels.
 
-#### Analysis: Diversity of Colors in LEGO Over the Years
-
-1.  Color Diversity Has Increased Significantly Over Time:
-
-In the early years (1950s–1980s), the number of unique colors remained low and stable, generally below 30. A sharp increase in color variety began around the mid-1990s, peaking around 2005 with over 100 unique colors. This rise reflects LEGO’s expansion into more diverse and creative themes, such as Star Wars, Friends, and Ninjago.
-
-2.  Modern LEGO Sets Offer a Wider Visual Palette:
-
-Since 2000, the trend has stabilized but remains at a much higher level of color diversity than earlier decades. The sustained use of 60–80 unique colors in recent years suggests a commitment to more visually rich and customizable sets, appealing to both children and adult collectors.
-
-3.  Color Complexity Supports Build Complexity :
-
-The increase in median parts per set (as seen in earlier graphs) correlates with increased color variety. More colors allow for greater detail, theme accuracy, and differentiation of components, which enhances both aesthetic and functional complexity.
-
-4.  Design and Brand Evolution
-
-The introduction of licensed sets (e.g., Harry Potter, Marvel) demands specific color palettes, further driving color diversity. Customization and modular building trends also push LEGO to expand its available color options for builders.
-
-#### Conclusion
+3.  Diversity of Colors in LEGO Over the Years (@fig-color_diversity)
 
 The growing number of unique colors used in LEGO sets is a strong indicator of increased design sophistication and build complexity. Color diversity not only enhances the visual experience, but also plays a critical role in enabling LEGO’s modern design capabilities and supporting more engaging, realistic, and intricate builds.
 
-#### Analysis: LEGO Sets with the Most Parts and Color Proportions
+4.  LEGO Sets with the Most Parts and Color Proportions (@fig-most_pieces)
 
-1.  Sets with the Highest Number of Parts:
+The number of parts in a LEGO set often correlates with either extensive design detail (e.g., maps, buildings) or technical function (e.g., vehicles, machinery). Color proportions reveal the thematic purpose of each set—some aim for vibrant storytelling, while others reflect precision and realism. Together, these sets showcase LEGO’s versatility across both form and function.
 
-World Map is the LEGO set with the most parts, exceeding 11,000 pieces. Its design focuses heavily on tile placement and color detail. NINJAGO City Gardens and The Ultimate Battle for Chima also rank highly, each containing around 5,500 to 6,000 pieces, showcasing advanced structural and decorative elements. Other large sets include Titanic, Colosseum, and Tower Bridge, each with over 9,000 pieces, reflecting highly detailed architectural builds.
 
-2.  Color Proportions and Variety:
+------------------------------------------------------------------------
 
-Sets like World Map and Tree House show high color diversity, using dozens of different shades to depict natural or geographic details. In contrast, Liebherr R 9800 Excavator, Bugatti Chiron, and Lamborghini Sián use a more concentrated color palette, focused on realism and technical detail (e.g., grey, black, yellow, blue). Star Wars sets like the Millennium Falcon, Death Star, and Imperial Star Destroyer are dominated by grey tones, consistent with their on-screen designs.
-
-3.  Function vs. Aesthetic Balance:
-
-Some sets prioritize aesthetic variety (e.g., World Map, Tree House) and thus have many colors but simpler build structures. Others focus on mechanical or architectural complexity (e.g., AT–AT, Excavator), using fewer colors but highly technical builds with intricate mechanisms.
-
-#### Conclusion
-
-# The number of parts in a LEGO set often correlates with either extensive design detail (e.g., maps, buildings) or technical function (e.g., vehicles, machinery). Color proportions reveal the thematic purpose of each set—some aim for vibrant storytelling, while others reflect precision and realism. Together, these sets showcase LEGO’s versatility across both form and function.
 
 ### Discussion
-
-Based on @fig-most_popular and @fig-least_popular, it can be seen that the more popular themes have on average significantly fewer parts in comparison to the least popular themes. This indicates that accessibility, simplicity, and recognizability may play a more important role in determining a theme's success, rather than set complexity alone. Simpler sets can appeal to more customers, especially younger children and first time taster, making them more commercially successful.
 
 ```{r}
 #| message: false
 #| warning: false
+#| echo: false
 
 # Creating correlation dataframe
 theme_correlation = set_themes |> 
@@ -396,9 +337,10 @@ theme_correlation = set_themes |>
 correlation_result = cor(theme_correlation$n_sets, 
                          theme_correlation$median_parts, 
                          method = "pearson")
-correlation_result
 ```
 
-However, the correlation analysis between the number of sets in each theme and the median number of parts per set produced a Pearson correlation coefficient of -0.08. This indicates a very weak negative correlation, meaning there is little to no linear relationship between a theme's popularity (number of sets) and the complexity of its sets (median parts count). In other words, while popular themes often feature smaller sets, the number of sets in a theme does not strongly predict the typical complexity of those sets. In terms of inventory management, the production of simple sets within existing themes can help to boost sales.
+Based on @fig-most_popular and @fig-least_popular, it can be seen that the more popular themes have on average significantly fewer parts in comparison to the least popular themes. This indicates that accessibility, simplicity, and recognizability may play a more important role in determining a theme's success, rather than set complexity alone. Simpler sets can appeal to more customers, especially younger children and first time taster, making them more commercially successful.
+
+However, the correlation analysis between the number of sets in each theme and the median number of parts per set produced a Pearson correlation coefficient of `r round(correlation_result, 3)` . This indicates a very weak negative correlation, meaning there is little to no linear relationship between a theme's popularity (number of sets) and the complexity of its sets (median parts count). In other words, while popular themes often feature smaller sets, the number of sets in a theme does not strongly predict the typical complexity of those sets. In terms of inventory management, the production of simple sets within existing themes can help to boost sales.
 
 Overall, the finding is aimed to emphasize that simplicity and accessibility are key factors of Lego theme popularity.
