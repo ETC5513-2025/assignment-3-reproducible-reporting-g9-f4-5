@@ -1,8 +1,69 @@
 ---
-title: "Lego Analysis"
-format: pdf
-editor: visual
+title: "Lego Analysis"  
+source: "TidyTuesday data sets"
+               
+format:
+  pdf:
+     Theme: Journal
+     toc: true
+     toc-title: "Table of Contents"
+     toc-depth: 3
+     include-before:
+      - |
+        \vfill
+        \begin{center}
+        \textbf{Prem MV} \\
+        Student ID: 35773499 \\
+        \texttt{pmal0022@student.monash.edu} \\[1em]
+
+        \textbf{Rong Chen} \\
+        Student ID: 34879374 \\
+        \texttt{rche0133@student.monash.edu} \\[1em]
+
+        \textbf{William Tang} \\
+        Student ID: 32476825 \\
+        \texttt{wtan0087@student.monash.edu} \\[1em]
+
+        \textbf{Zhaoyu Zhang} \\
+        Student ID: 34128387 \\
+        \texttt{zzha0467@student.monash.edu}
+        \end{center}
+        \vspace*{1cm}
+        \newpage
 ---
+
+```{=latex}
+\newpage
+\vspace*{\fill}
+```
+
+## Executive Summary
+
+Using the 2022 TidyTuesday LEGO dataset of over 1,100 sets, we conducted a descriptive analysis to explore theme prevalence and set complexity over the years.
+
+After data cleaning, combining and standardization, we produced a theme‐popularity bar chart and a chart with median number of parts over the year to understand trends in Lego themes and complexity in number of parts and colours.
+
+By looking over the trends in the number of theme sets, we identify the trends in Lego's product strategy and its expansion.
+
+We came to a conclusion that marketing and sales teams spotlight these high impact themes and test promotions for rising themes to stay where they are in the toy market.
+
+```{=latex}
+\vspace*{\fill}
+```
+
+\newpage
+
+## Introduction
+
+Lego, originating from Denmark, was officially founded in the year 1934 by Ole Kirk Christiansen and is one of the world’s most iconic toy companies. Initially Christiansen was a carpenter who was making wooden toys but as time passed by, he adapted to Kiddi-craft(Self blocking Bricks) and then automatic binding bricks were invented.
+
+Over the years, Lego has expanded the production line vastly by producing theme based Lego-sets like Star-wars, Harry Potter, Marvel etc... and the very first store to open anywhere in the world was in Sydney, Australia, in the year 1984. Currently, the most biggest Lego set available is the world map set consisting of 11,695 pieces and there are much more sets like these which really keeps you occupied. Even though Lego stopped patent for Lego bricks a long time ago, its competitors could not stand a chance in the toy-construction market for example Lego sued the CoCo Toy Company for copyright infringement and the company has to cease manufacture of the products.
+
+The source for the dataset is TidyTuesday and this community has taken the liberty to aggregate that year’s releases into a publicly available dataset with the help of Rebrickable, who maintains and updates the Lego Parts/Sets/Colors of every official LEGO set. Beyond physical bricks, LEGO has expanded into digital games like LEGO Star Wars, LEGO Fortnite and movies, TV series.
+
+The methodology includes exploring of the vast data, combinnig data-sets and also includes graphs to understand about themes of Lego set and gives complexity of colours and number of parts of LEGO from the beginning till date. 10.
+
+\newpage
 
 ## Analysis of Lego
 
@@ -293,6 +354,8 @@ top_20_plot
 ```
 
 ------------------------------------------------------------------------
+
+\newpage
 
 ### Results:
 
