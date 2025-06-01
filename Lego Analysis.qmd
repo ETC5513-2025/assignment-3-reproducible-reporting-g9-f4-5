@@ -4,6 +4,7 @@ source: "TidyTuesday data sets"
                
 format:
   pdf:
+     fig-pos: "H"
      Theme: Journal
      toc: true
      toc-title: "Table of Contents"
@@ -61,7 +62,7 @@ Over the years, Lego has expanded the production line vastly by producing theme 
 
 The source for the dataset is TidyTuesday and this community has taken the liberty to aggregate that year’s releases into a publicly available dataset with the help of Rebrickable, who maintains and updates the Lego Parts/Sets/Colors of every official LEGO set. Beyond physical bricks, LEGO has expanded into digital games like LEGO Star Wars, LEGO Fortnite and movies, TV series.
 
-The methodology includes exploring of the vast data, combinnig data-sets and also includes graphs to understand about themes of Lego set and gives complexity of colours and number of parts of LEGO from the beginning till date. 10.
+The methodology includes exploring of the vast data, combining data-sets and also includes graphs to understand about themes of Lego set and gives complexity of colours and number of parts of LEGO from the beginning till date. 10.
 
 \newpage
 
@@ -377,6 +378,8 @@ The number of parts in a LEGO set often correlates with either extensive design 
 
 ------------------------------------------------------------------------
 
+\newpage
+
 ### Discussion
 
 ```{r}
@@ -403,3 +406,18 @@ Based on @fig-most_popular and @fig-least_popular, it can be seen that the more 
 However, the correlation analysis between the number of sets in each theme and the median number of parts per set produced a Pearson correlation coefficient of `r round(correlation_result, 3)` . This indicates a very weak negative correlation, meaning there is little to no linear relationship between a theme's popularity (number of sets) and the complexity of its sets (median parts count). In other words, while popular themes often feature smaller sets, the number of sets in a theme does not strongly predict the typical complexity of those sets. In terms of inventory management, the production of simple sets within existing themes can help to boost sales.
 
 Overall, the finding is aimed to emphasize that simplicity and accessibility are key factors of Lego theme popularity.
+
+------------------------------------------------------------------------
+
+## Recommendations & Conclusion
+
+
+------------------------------------------------------------------------
+
+\newpage
+
+## References
+
+LEGO. (n.d.). Top 10 Biggest LEGO® Sets Ever. Www.lego.com. <https://www.lego.com/en-us/categories/adults-welcome/article/biggest-lego-sets-ever-made>
+
+rfordatascience. (2022, September 6). LEGO Database by Rebrickable - TidyTuesday. GitHub. <https://github.com/rfordatascience/tidytuesday/tree/main/data/2022/2022-09-06>
