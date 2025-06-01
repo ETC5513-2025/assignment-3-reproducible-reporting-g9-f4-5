@@ -4,7 +4,6 @@ format: pdf
 editor: visual
 ---
 
-<<<<<<< HEAD
 ## Analysis of Lego
 
 ```{r}
@@ -313,8 +312,6 @@ The growing number of unique colors used in LEGO sets is a strong indicator of i
 
 The number of parts in a LEGO set often correlates with either extensive design detail (e.g., maps, buildings) or technical function (e.g., vehicles, machinery). Color proportions reveal the thematic purpose of each set—some aim for vibrant storytelling, while others reflect precision and realism. Together, these sets showcase LEGO’s versatility across both form and function.
 
-=======
->>>>>>> Discussion
 ### Discussion
 
 Based on @fig-most_popular and @fig-least_popular, it can be seen that the more popular themes have on average significantly fewer parts in comparison to the least popular themes. This indicates that accessibility, simplicity, and recognizability may play a more important role in determining a theme's success, rather than set complexity alone. Simpler sets can appeal to more customers, especially younger children and first time taster, making them more commercially successful.
