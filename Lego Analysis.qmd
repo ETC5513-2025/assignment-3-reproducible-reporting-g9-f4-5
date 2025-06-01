@@ -1,7 +1,342 @@
 ---
-title: "Part A - Lego Analysis"
+title: "Lego Analysis"
 format: pdf
 editor: visual
 ---
 
-## 
+## Analysis of Lego
+
+```{r}
+#| label: Loading libraries
+#| echo: false
+#| message: false
+#| warning: false
+
+# Loading libraries
+library(tidyverse)
+library(tidytuesdayR)
+library(ggplot2)
+library(scales)
+library(kableExtra)
+```
+
+```{r}
+#| label: Loading data
+#| echo: false
+#| message: false
+#| warning: false
+
+# Read data from tidytuesday
+tuesdata = tidytuesdayR::tt_load('2022-09-06')
+
+for (name in names(tuesdata)) 
+{var_name = gsub("\\.csv$", "", name) 
+  assign(var_name, tuesdata[[name]])}
+
+# Dropping data not relevant for analysis
+rm(tuesdata, inventory_sets, 
+   elements, part_categories, 
+   part_relationships, minifigs, 
+   inventory_minifigs, name, var_name)
+```
+
+```{r}
+#| label: Set themes
+#| echo: false
+#| message: false
+#| warning: false
+
+# Joining sets with themes and filtering out the sets with no parts due to error in data collection
+set_themes = sets |>
+  filter(!is.na(num_parts) & num_parts >0) |>
+  left_join(themes |>
+              select(id, theme_name = name), 
+              by = c(theme_id = "id"))
+```
+
+### Methodology:
+
+In order to investigate LEGO set trends and theme popularity, we used the LEGO data on TidyTuesday provided by Rebrickable.
+
+This dataset contained all the information about officially released LEGO pieces were we focus on theme names, number of parts, colors and release years. The dataset was filtered to exclude sets with missing or zero part counts, as these entries would not contribute meaningfully to part-based analyses.
+
+We first grouped sets by theme to calculate the total number of sets and the median number of parts per theme @fig-theme_by_parts. The top 20 most and least popular themes were identified and visualized using a horizontal bar chart @fig-most_popular & @fig-least_popular . Each bar's length represents the number of sets per theme and fill color indicates the median number of parts. This allowed us to compare popularity with complexity as measured by part count.
+
+In addition to thematic analysis, we tracked the evolution of LEGO set complexity over time measured by median part count and color diversity. These trends are visualized in @fig-parts_trend & @fig-color_diversity, where x-axis shows the year and y-axis showing the corresponding median part or unique colour count. A smooth trend line over the years highlights a general increase in part and colour count reflecting growing set intricacy over time.
+
+Finally, to explore the largest sets every produced by LEGO, a bar chart @fig-most_pieces was created, where each bar represents a set and is segmented by the proportion of colours used. The bars are filled with the actual hex colours replacing fill in each set, allowing for a really clear visualisation of both the total number of parts and the colour distribution, and provides insights into which colours are most prevalent in large complex builds and highlight some of the design choices behind some of LEGO's most detailed sets.
+
+------------------------------------------------------------------------
+
+**Theme popularity** - based on the number of sets released under each theme. More sets = more popular
+
+```{r}
+#| label: fig-theme_by_parts
+#| echo: false
+#| message: false
+#| warning: false
+#| fig-cap: Theme by parts
+
+# Table with theme name ordered by desc of sets and their median parts
+theme_name_summary = set_themes |> 
+  group_by(theme_name) |>
+  summarize(n_sets = n(), 
+            median_parts = round(median(num_parts))) |>
+  arrange(desc(n_sets)) |> 
+  filter(n_sets >= 100)
+
+
+theme_summary = knitr::kable(theme_name_summary, caption = "Theme ordered by sets with their median parts", row.names = FALSE)
+
+theme_summary
+```
+
+```{r}
+#| label: fig-most_popular
+#| echo: false
+#| message: false
+#| warning: false
+#| fig-cap: Most popular themes
+
+# Finding out the most popular themes
+most_popular = set_themes |>
+  group_by(theme_name) |>
+  summarize(total_sets = n(),
+            median_parts = round(median(num_parts, na.rm = TRUE)),
+            .groups = "drop") |>
+  arrange(desc(total_sets)) |>
+  head(20)
+
+# Plotting the most popular themes
+most_popular_plot = 
+  ggplot(most_popular,
+         aes(x = total_sets, 
+             y = reorder(theme_name, total_sets))) +
+  geom_bar(stat = "identity", aes(fill = median_parts)) +
+  geom_text(aes(label = median_parts, 
+                x = total_sets + 5),
+            hjust = 0, size = 3.2) +
+  scale_fill_gradient(low = "#00648C", high = "#00BC8C", limits = c(0, 2600)) +
+  labs(fill = "Median parts",
+       title = "All time most popular lego themes with median parts",
+       x = "Total number of sets",
+       y = "") +
+  theme_minimal() +
+  theme(plot.title.position = "plot",plot.title = element_text(hjust = 0))
+
+most_popular_plot
+```
+
+```{r}
+#| label: fig-least_popular
+#| echo: false
+#| message: false
+#| warning: false
+#| fig-cap: Least popular themes
+
+# Finding out the least popular themes
+least_popular = set_themes |>
+  group_by(theme_name) |>
+  summarize(total_sets = n(),
+            median_parts = round(median(num_parts, na.rm = TRUE)),
+            .groups = "drop") |>
+  arrange(desc(total_sets)) |>
+  tail(20)
+
+# Plotting the least popular themes
+least_popular_plot = 
+  ggplot(least_popular, 
+         aes(x = total_sets, 
+             y = reorder(theme_name, total_sets))) +
+  geom_bar(stat = "identity", aes(fill = median_parts)) +
+  geom_text(aes(label = median_parts),
+            hjust = 0, size = 3.2) +
+  scale_fill_gradient(low = "#00648C", high = "#00BC8C", limits = c(0, 2600)) +
+  labs(fill = "Median parts",
+       title = "All time least popular lego themes with median parts",
+       x = "Total number of sets",
+       y = "")+ 
+  xlim(0,4)+
+  theme_minimal() +
+  theme(plot.title.position = "plot",plot.title = element_text(hjust = 0))
+
+least_popular_plot
+```
+
+```{r}
+#| message: false
+#| warning: false
+#| label: fig-parts_trend
+#| fig-cap: Median parts by year
+#| echo: false
+
+# Creating dataframe for part_year
+part_year = set_themes |>
+  group_by(year) |>
+  summarise(median_parts = median(num_parts, na.rm = TRUE), .groups = "drop")
+
+# Plotting the Line chart of median parts per set over the years
+part_year_plot = ggplot(part_year, aes(x = year, y = median_parts)) +
+  geom_area(fill = "#00BC8C", alpha = 0.2) +
+  geom_line(color = "#00BC8C", linewidth = 1) +
+  geom_point(color = "#00648C") +
+  geom_smooth(method = "loess", se = FALSE, color = "red", linetype = "dashed") +
+  labs(title = "Median number of parts over the years",
+       x = "Year",
+       y = "Median parts per set")+
+  theme_minimal() 
+
+part_year_plot
+```
+
+```{r}
+#| message: false
+#| warning: false
+#| label: fig-color_diversity
+#| fig-cap: Unique colour count by year
+#| echo: false
+
+# Creating dataframe for yearly_summary
+yearly_summary = sets |>
+  select(set_num, year, theme_id) |>
+  inner_join(inventories, by = "set_num") |>
+  inner_join(inventory_parts, by = c("id" = "inventory_id")) |>
+  filter(color_id >= 0) |>
+  distinct(set_num, year, color_id, theme_id) |>
+  group_by(year) |>
+  summarize(n_sets = n_distinct(set_num),
+            unique_colors = n_distinct(color_id),
+            n_themes = n_distinct(theme_id),
+            .groups = "drop") |>
+  filter(!is.na(year))
+
+# Plot unique colors over years
+yearly_summary_plot = ggplot(yearly_summary, aes(x = year, y = unique_colors)) +
+  geom_area(fill = "#00BC8C", alpha = 0.2) +
+  geom_line(color = "#00BC8C", linewidth = 1) +
+  geom_point(color = "#00648C") +
+  geom_smooth(method = "loess", se = FALSE, color = "red", linetype = "dashed") +
+  labs(title = "Number of unique colors used in lego sets over the years",
+       x = "Year",
+       y = "Unique Colors") +
+  ylim(0,125) +
+  theme_minimal()
+
+yearly_summary_plot
+```
+
+```{r}
+#| message: false
+#| warning: false
+#| label: fig-most_pieces
+#| fig-cap: Top 20 sets by part count with color proportion
+#| echo: false
+
+# Creating a hex column to combine # with the hex rgb values in colors$rgb
+colors = colors|>
+  mutate(hex = paste0("#", rgb))
+
+# Summarising parts by set and colour
+set_parts_colors = inventory_parts |>
+  inner_join(inventories, by = c("inventory_id" = "id")) |>
+  group_by(set_num, color_id) |>
+  summarise(parts_color = sum(quantity, na.rm = TRUE), .groups = "drop")
+
+# Finding the total parts per set
+set_total_parts = set_parts_colors |>
+  group_by(set_num) |>
+  summarise(total_parts = sum(parts_color), .groups = "drop")
+
+# Joining the dataframes together
+set_parts_colors = set_parts_colors |>
+  inner_join(set_total_parts, by = "set_num") |>
+  inner_join(sets |> select(set_num, name), by = "set_num")
+
+# Calculating proportion of color for each set
+set_parts_colors = set_parts_colors |>
+  mutate(proportion = parts_color/total_parts)
+
+# Retrieving the top 20 sets by total parts
+top_20_sets = set_total_parts |>
+  arrange(desc(total_parts)) |>
+  slice_head(n = 20) |>
+  pull(set_num)
+
+# Joining with the top 20 sets with hex color
+top_20_data = set_parts_colors |>
+  filter(set_num %in% top_20_sets) |>
+  left_join(colors |> select(id, hex), by = c("color_id" = "id"))
+
+# Dropping unused datasets to improve performance
+rm(top_20_sets)
+
+# Plotting the top 20 sets with the most piece and filled with proportion of colours
+top_20_plot = ggplot(top_20_data, 
+                     aes(x = reorder(name, total_parts), 
+                         y = parts_color, fill = hex)) +
+  geom_bar(stat = "identity", 
+           color = "black", 
+           linewidth = 0.1) +
+  scale_fill_identity() +
+  labs(title = "Top 20 lego sets by # parts and colour proportion",
+       x = "",
+       y = "Number of Parts",
+       fill = "Color") +
+  coord_flip() +
+  theme_minimal() +
+  theme(plot.title.position = "plot",plot.title = element_text(hjust = 0))
+
+top_20_plot
+
+# <--Remove # to clean all previous selections 
+# rm(colors, least_popular, most_popular, part_year, parts, yearly_summary, theme_name_summary, theme_correlations, sets, parts, inventory_parts, set_parts_colors, set_themes, set_total_parts, theme_correlation, themes, inventories, top_20_data)
+```
+
+------------------------------------------------------------------------
+
+### Results:
+
+1.  Most Popular and least Popular LEGO Themes (@fig-most_popular & @fig-least_popular)
+
+The most successful LEGO themes share common features: strong brand identity, wide audience appeal, and ongoing product development.The least popular themes were often short-lived, targeted at small audiences, or limited by licensing.Understanding these patterns helps LEGO and similar brands plan better product strategies and maximize market impact.
+
+2.  Complexity of LEGO Sets Over the Years (@fig-parts_trend)
+
+LEGO sets became more complex up to the late 1970s.Since then, the median complexity has plateaued, likely due to diversification of set sizes to meet the needs of different age groups and skill levels.
+
+3.  Diversity of Colors in LEGO Over the Years (@fig-color_diversity)
+
+The growing number of unique colors used in LEGO sets is a strong indicator of increased design sophistication and build complexity. Color diversity not only enhances the visual experience, but also plays a critical role in enabling LEGO’s modern design capabilities and supporting more engaging, realistic, and intricate builds.
+
+4.  LEGO Sets with the Most Parts and Color Proportions (@fig-most_pieces)
+
+The number of parts in a LEGO set often correlates with either extensive design detail (e.g., maps, buildings) or technical function (e.g., vehicles, machinery). Color proportions reveal the thematic purpose of each set—some aim for vibrant storytelling, while others reflect precision and realism. Together, these sets showcase LEGO’s versatility across both form and function.
+
+------------------------------------------------------------------------
+
+### Discussion
+
+```{r}
+#| message: false
+#| warning: false
+#| echo: false
+
+# Creating correlation dataframe
+theme_correlation = set_themes |> 
+  group_by(theme_name) |>
+  summarize(n_sets = n(), 
+            median_parts = median(num_parts, na.rm = TRUE), 
+            .groups = "drop")|>
+  filter(!is.na(median_parts))
+
+# Calculate correlation
+correlation_result = cor(theme_correlation$n_sets, 
+                         theme_correlation$median_parts, 
+                         method = "pearson")
+```
+
+Based on @fig-most_popular and @fig-least_popular, it can be seen that the more popular themes have on average significantly fewer parts in comparison to the least popular themes. This indicates that accessibility, simplicity, and recognizability may play a more important role in determining a theme's success, rather than set complexity alone. Simpler sets can appeal to more customers, especially younger children and first time taster, making them more commercially successful.
+
+However, the correlation analysis between the number of sets in each theme and the median number of parts per set produced a Pearson correlation coefficient of `r round(correlation_result, 3)` . This indicates a very weak negative correlation, meaning there is little to no linear relationship between a theme's popularity (number of sets) and the complexity of its sets (median parts count). In other words, while popular themes often feature smaller sets, the number of sets in a theme does not strongly predict the typical complexity of those sets. In terms of inventory management, the production of simple sets within existing themes can help to boost sales.
+
+Overall, the finding is aimed to emphasize that simplicity and accessibility are key factors of Lego theme popularity.
