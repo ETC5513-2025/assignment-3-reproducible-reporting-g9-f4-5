@@ -1,5 +1,5 @@
 ---
-title: "Lego Analysis"  
+title: "LEGO’s evolution: Insights into theme popularity and set complexity"  
 source: "TidyTuesday data sets"
                
 format:
