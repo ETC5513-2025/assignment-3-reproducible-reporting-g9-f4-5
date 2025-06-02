@@ -33,8 +33,8 @@ format:
 
 1.  Title and Authors
 2.  Table of contents
-3.  Executive Summary
-4.  Introduction
+3.  Introduction
+4.  Executive Summary
 5.  Methodology
 6.  Results
 7.  Discussion, conclusion and recommendations
@@ -56,3 +56,24 @@ We came to a conclusion that marketing and sales teams spotlight these high impa
 
 ------------------------------------------------------------------------
 
+## Problem Questions - Our motivation for this Analysis
+
+From the analysis made, we as a group decided to further analyise more about 3 main questions,
+
+**1. What were the most popular and least popular themes in LEGO?**
+
+Our motivation - 
+We were motivated by LEGO’s long-standing success in adapting its product lines to pop culture and current trends. LEGO has aligned its themes with what is popular at the time for example, when the Marvel movies were released, they entered into manufacturing of Marvel Hero sets or these days F1 is gaining more popularity among the younger generation they entered this entertainment sports field as well where you could build model cars of F1 to keep it as a display piece!. The main reason Lego has so many themes is because it adapts to the most trending thing happening at that time and releases limited edition sets for people to collect.
+Our analysis helps us understand which themes have received the most and least attention. From the graph, we can see that Technic is among the most popular themes, yet it has only 64 number of sets suggesting that popularity may also be influenced by part complexity or set reputation rather than just quantity and talking about least popular, Zooters is one of the least popular themes, with only 9 sets ever released.
+
+
+**2. How has the complexity of LEGO sets changed over the years??**
+
+The main reason we decided to further on this question is because it helps us understand LEGO’s growth in terms of design and difficulty and the solution we arrived for this it to look at how the median number of parts per set has changed over the years. The sets in the early years had fewer pieces and were much simpler. Not that there are simpler sets now but in recent years—especially after 2010 there’s a clear increase in the number of parts per set, showing that LEGO is now making more detailed and complex builds. This increase in complexity tells us that LEGO’s effort to appeal to broader audience, not only for kids but for elders to by offering challenging builds and large sets.
+
+
+**3. What are the largest LEGO sets available officially??**
+
+Reason behind this question is we wanted to find out the largest sets Lego has to offer for us and wanted to know about color complexity as well. So we merged these two to get a clear result. We combined both part count and color data for the Top 20 largest sets and arrived at a clearer picture. From our analysis, we found that the World Map is the largest set ever released, with over 11,000 pieces and no longer available now. Other massive sets include the NINJAGO City Gardens, Titanic, and Millennium Falcon, each featuring thousands of pieces and a wide variety of colors. Lego just does'nt adapt and release a theme or a set which is just popular and trending, it looks at the legacy it had, tributes to make like monuments - Taj Mahal, Effiel Tower etc and various other reasons. This also shows that as LEGO sets get larger, they also become more visually diverse and detailed for builders and collectors to buy them for themselves.
+
+---
