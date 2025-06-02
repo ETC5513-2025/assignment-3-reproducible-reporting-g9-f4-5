@@ -39,9 +39,7 @@ format:
 
 Using the 2022 TidyTuesday LEGO dataset of over 1,100 sets, we conducted a descriptive analysis to explore theme prevalence and set complexity over the years.
 
-After data cleaning, combining and standardization, we produced a theme‐popularity bar chart and a chart with median number of parts over the year to understand trends in Lego themes and complexity in number of parts and colours.
-
-By looking over the trends in the number of theme sets, we identify the trends in Lego's product strategy and its expansion.
+After data cleaning, combining and standardization, we produced a theme‐popularity bar chart and a chart with median number of parts over the year to understand trends in Lego themes and complexity in number of parts and colors. By looking over the trends in the number of theme sets, we identify the trends in Lego's product strategy and its expansion.
 
 We came to a conclusion that marketing and sales teams spotlight these high impact themes and test promotions for rising themes to stay where they are in the toy market.
 
@@ -51,11 +49,23 @@ We came to a conclusion that marketing and sales teams spotlight these high impa
 
 Lego, originating from Denmark, was officially founded in the year 1934 by Ole Kirk Christiansen and is one of the world’s most iconic toy companies. Initially Christiansen was a carpenter who was making wooden toys but as time passed by, he adapted to Kiddi-craft(Self blocking Bricks) and then automatic binding bricks were invented.
 
-Over the years, Lego has expanded the production line vastly by producing theme based Lego-sets like Star-wars, Harry Potter, Marvel etc... and the very first store to open anywhere in the world was in Sydney, Australia, in the year 1984. Currently, the most biggest Lego set available is the world map set consisting of 11,695 pieces and there are much more sets like these which really keeps you occupied. Even though Lego stopped patent for Lego bricks a long time ago, its competitors could not stand a chance in the toy-construction market for example Lego sued the CoCo Toy Company for copyright infringement and the company has to cease manufacture of the products.
+Over the years, Lego has expanded the production line vastly by producing theme based Lego-sets like Star-wars, Harry Potter, Marvel etc... and the very first store to open anywhere in the world was in Sydney, Australia, in the year 1984.
+
+Currently, the most biggest Lego set available is the world map set consisting of 11,695 pieces and there are much more sets like these which really keeps you occupied. Even though Lego stopped patent for Lego bricks a long time ago, its competitors could not stand a chance in the toy-construction market for example Lego sued the CoCo Toy Company for copyright infringement and the company has to cease manufacture of the products.
+
+We were motivated by LEGO’s long-standing success in adapting its product lines to pop culture and current trends, we also wanted to understand LEGO’s growth in terms of design and difficulty by finding out the largest sets LEGO has to offer for us as well as color complexity for those sets.
+
+Based on our motivation, we have decided on 3 main questions:
+
+-   What were the most popular and least popular themes in LEGO?
+
+-   How has the complexity of LEGO sets changed over the years?
+
+-   How has the complexity of LEGO sets changed over the years?
 
 The source for the dataset is TidyTuesday and this community has taken the liberty to aggregate that year’s releases into a publicly available dataset with the help of Rebrickable, who maintains and updates the Lego Parts/Sets/Colors of every official LEGO set. Beyond physical bricks, LEGO has expanded into digital games like LEGO Star Wars, LEGO Fortnite and movies, TV series.
 
-The methodology includes exploring of the vast data, combining data-sets and also includes graphs to understand about themes of Lego set and gives complexity of colours and number of parts of LEGO from the beginning till date. 10.
+The methodology includes exploring of the vast data, combining data-sets and also includes graphs to understand about themes of LEGO set and gives complexity of colours and number of parts of LEGO from the beginning till 2022.
 
 \newpage
 
@@ -113,7 +123,7 @@ set_themes = sets |>
 
 In order to investigate LEGO set trends and theme popularity, we used the LEGO data on TidyTuesday provided by Rebrickable.
 
-This dataset contained all the information about officially released LEGO pieces were we focus on theme names, number of parts, colors and release years. The dataset was filtered to exclude sets with missing or zero part counts, as these entries would not contribute meaningfully to part-based analyses.
+The dataset contained all the information about officially released LEGO pieces were we focus on theme names, number of parts, colors and release years. The dataset was filtered to exclude sets with missing or zero part counts, as these entries would not contribute meaningfully to part-based analyses.
 
 We first grouped sets by theme to calculate the total number of sets and the median number of parts per theme @fig-theme_by_parts. The top 20 most and least popular themes were identified and visualized using a horizontal bar chart @fig-most_popular & @fig-least_popular . Each bar's length represents the number of sets per theme and fill color indicates the median number of parts. This allowed us to compare popularity with complexity as measured by part count.
 
