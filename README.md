@@ -8,5 +8,3 @@ Group Members:
 * Zhaoyu Zhang
 
 Topic: Lego analysis
-
-Introduction
