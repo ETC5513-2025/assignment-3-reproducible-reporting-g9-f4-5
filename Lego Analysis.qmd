@@ -414,7 +414,9 @@ Overall, the finding is aimed to emphasize that simplicity and accessibility are
 
 ## Recommendations & Conclusion:
 
-Our analysis highlights several key insights into LEGO’s evolution and product strategy: Firstly, LEGO focuses on certain themes, aligning with strong brand identities and wide audience appeal. Secondly, LEGO sets have obviously increased in complexity, reflecting better design, and building experiences. Finally, the most successful LEGO themes strategically balance innovation with accessibility, emphasizing thoughtful and inclusive design over mere complexity. This balanced approach not only maintains broad customer engagement but also supports sustained brand growth. As LEGO continues to evolve, understanding the interplay between complexity and accessibility will remain essential for its ongoing success.
+Our analysis reveals several important insights into LEGO’s evolution and product strategy. LEGO’s focus on select themes has helped establish strong brand identities and broad appeal across diverse customer groups. Over time, LEGO sets have become increasingly complex, reflecting improvements in both design and user experience. However, our findings suggest that the company’s most successful themes are those that balance innovation with accessibility, ensuring that sets remain engaging for advanced builders while still approachable for newcomers.
+
+We recommend that LEGO continue to prioritize this balanced approach in future product development. By simultaneously fostering creativity and inclusiveness, LEGO is able to maintain high levels of customer engagement and support the brand's long-term growth. As the company's product portfolio expands, a continued focus on the interplay between set complexity and ease of use will be critical to maintaining its global success and relevance.
 
 ------------------------------------------------------------------------
 
