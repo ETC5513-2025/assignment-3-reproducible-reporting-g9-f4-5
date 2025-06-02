@@ -144,11 +144,11 @@
 <h4 id="data-set-overview">Data-set Overview:</h4>
 <ul>
 <li><p><strong>Source:</strong> TidyTuesday 2022 LEGO dataset - Rebrickable.</p></li>
-<li><p><strong>Description:<br>
-a.</strong>Themes &amp; Colours<br>
+<li><p><strong>Description:</strong><br>
+a.Themes &amp; Colours<br>
 b.Sets &amp; Release year<br>
 c.Number of parts per set</p></li>
-<li><p>Inventory &amp; Parts</p></li>
+<li><p><strong>Inventory &amp; Parts</strong></p></li>
 <li><p><strong>Scope:</strong> No sales or revenue data—only set metadata.</p></li>
 </ul>
 </div><div class="column" style="font-size: 0.7em;">
@@ -208,7 +208,7 @@ c.Number of parts per set</p></li>
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="Lego-Analysis---Slides_files/figure-revealjs/unnamed-chunk-2-1.png" width="528"></p>
+<p><img data-src="Lego-Analysis---Slides_files/figure-revealjs/unnamed-chunk-11-1.png" width="528"></p>
 </figure>
 </div>
 </div>
@@ -217,7 +217,7 @@ c.Number of parts per set</p></li>
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="Lego-Analysis---Slides_files/figure-revealjs/unnamed-chunk-3-1.png" width="528"></p>
+<p><img data-src="Lego-Analysis---Slides_files/figure-revealjs/unnamed-chunk-12-1.png" width="528"></p>
 </figure>
 </div>
 </div>
@@ -303,7 +303,7 @@ c.Number of parts per set</p></li>
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="Lego-Analysis---Slides_files/figure-revealjs/unnamed-chunk-4-1.png" width="528"></p>
+<p><img data-src="Lego-Analysis---Slides_files/figure-revealjs/unnamed-chunk-16-1.png" width="528"></p>
 </figure>
 </div>
 </div>
@@ -312,7 +312,7 @@ c.Number of parts per set</p></li>
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="Lego-Analysis---Slides_files/figure-revealjs/unnamed-chunk-5-1.png" width="528"></p>
+<p><img data-src="Lego-Analysis---Slides_files/figure-revealjs/unnamed-chunk-17-1.png" width="528"></p>
 </figure>
 </div>
 </div>
@@ -328,7 +328,7 @@ c.Number of parts per set</p></li>
 <li>LEGO sets became more complex up to the late 1970s</li>
 <li>Median complexity has plateaued since then</li>
 <li>Diversification of set sizes to meet the needs of different age groups and skill levels</li>
-<li>strong indicator of increased design sophistication and build complexity</li>
+<li>Strong indicator of increased design sophistication and build complexity</li>
 </ul>
 </div><div class="column" style="width:50%;">
 <div class="cell">
@@ -619,80 +619,42 @@ c.Number of parts per set</p></li>
       });
     </script>
     
-
     <script>
-
       // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-
       // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-
       // slide changes (different for each slide format).
-
       (function () {
-
         // dispatch for htmlwidgets
-
         function fireSlideEnter() {
-
           const event = window.document.createEvent("Event");
-
           event.initEvent("slideenter", true, true);
-
           window.document.dispatchEvent(event);
-
         }
-
-    
 
         function fireSlideChanged(previousSlide, currentSlide) {
-
           fireSlideEnter();
 
-    
-
           // dispatch for shiny
-
           if (window.jQuery) {
-
             if (previousSlide) {
-
               window.jQuery(previousSlide).trigger("hidden");
-
             }
-
             if (currentSlide) {
-
               window.jQuery(currentSlide).trigger("shown");
-
             }
-
           }
-
         }
-
-    
 
         // hookup for slidy
-
         if (window.w3c_slidy) {
-
           window.w3c_slidy.add_observer(function (slide_num) {
-
             // slide_num starts at position 1
-
             fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-
           });
-
         }
 
-    
-
       })();
-
     </script>
-
-    
 
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
