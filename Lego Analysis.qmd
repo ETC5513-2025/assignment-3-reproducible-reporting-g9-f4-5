@@ -1,41 +1,39 @@
 ---
-title: "LEGO’s evolution: Insights into theme popularity and set complexity"  
 source: "TidyTuesday data sets"
                
 format:
   pdf:
+     documentclass: report
+     fig-pos: "H"
      Theme: Journal
      toc: true
      toc-title: "Table of Contents"
      toc-depth: 3
      include-before:
       - |
-        \vfill
+        \begin{titlepage}
         \begin{center}
+        \vspace*{4cm}
+        {\LARGE \textbf{LEGO’s evolution: Insights into theme popularity and set complexity}}\\[3cm]
+        \large
         \textbf{Prem MV} \\
         Student ID: 35773499 \\
-        \texttt{pmal0022@student.monash.edu} \\[1em]
-
+        \texttt{pmal0022@student.monash.edu} \\[2em]
         \textbf{Rong Chen} \\
         Student ID: 34879374 \\
-        \texttt{rche0133@student.monash.edu} \\[1em]
-
+        \texttt{rche0133@student.monash.edu} \\[2em]
         \textbf{William Tang} \\
         Student ID: 32476825 \\
-        \texttt{wtan0087@student.monash.edu} \\[1em]
-
+        \texttt{wtan0087@student.monash.edu} \\[2em]
         \textbf{Zhaoyu Zhang} \\
         Student ID: 34128387 \\
-        \texttt{zzha0467@student.monash.edu}
+        \texttt{zzha0467@student.monash.edu} \\[2em]
+        \vfill
         \end{center}
-        \vspace*{1cm}
-        \newpage
+        \end{titlepage}
 ---
 
-```{=latex}
 \newpage
-\vspace*{\fill}
-```
 
 ## Executive Summary
 
@@ -47,10 +45,6 @@ By looking over the trends in the number of theme sets, we identify the trends i
 
 We came to a conclusion that marketing and sales teams spotlight these high impact themes and test promotions for rising themes to stay where they are in the toy market.
 
-```{=latex}
-\vspace*{\fill}
-```
-
 \newpage
 
 ## Introduction
@@ -61,7 +55,7 @@ Over the years, Lego has expanded the production line vastly by producing theme 
 
 The source for the dataset is TidyTuesday and this community has taken the liberty to aggregate that year’s releases into a publicly available dataset with the help of Rebrickable, who maintains and updates the Lego Parts/Sets/Colors of every official LEGO set. Beyond physical bricks, LEGO has expanded into digital games like LEGO Star Wars, LEGO Fortnite and movies, TV series.
 
-The methodology includes exploring of the vast data, combinnig data-sets and also includes graphs to understand about themes of Lego set and gives complexity of colours and number of parts of LEGO from the beginning till date. 10.
+The methodology includes exploring of the vast data, combining data-sets and also includes graphs to understand about themes of Lego set and gives complexity of colours and number of parts of LEGO from the beginning till date. 10.
 
 \newpage
 
@@ -361,11 +355,11 @@ top_20_plot
 
 1.  Most Popular and least Popular LEGO Themes (@fig-most_popular & @fig-least_popular)
 
-The most successful LEGO themes share common features: strong brand identity, wide audience appeal, and ongoing product development.The least popular themes were often short-lived, targeted at small audiences, or limited by licensing.Understanding these patterns helps LEGO and similar brands plan better product strategies and maximize market impact.
+The most successful LEGO themes share common features: strong brand identity, wide audience appeal, and ongoing product development. The least popular themes were often short-lived, targeted at small audiences, or limited by licensing. Understanding these patterns helps LEGO and similar brands plan better product strategies and maximize market impact.
 
 2.  Complexity of LEGO Sets Over the Years (@fig-parts_trend)
 
-LEGO sets became more complex up to the late 1970s.Since then, the median complexity has plateaued, likely due to diversification of set sizes to meet the needs of different age groups and skill levels.
+LEGO sets became more complex up to the late 1970s. Since then, the median complexity has plateaued, likely due to diversification of set sizes to meet the needs of different age groups and skill levels.
 
 3.  Diversity of Colors in LEGO Over the Years (@fig-color_diversity)
 
@@ -373,11 +367,13 @@ The growing number of unique colors used in LEGO sets is a strong indicator of i
 
 4.  LEGO Sets with the Most Parts and Color Proportions (@fig-most_pieces)
 
-The number of parts in a LEGO set often correlates with either extensive design detail (e.g., maps, buildings) or technical function (e.g., vehicles, machinery). Color proportions reveal the thematic purpose of each set—some aim for vibrant storytelling, while others reflect precision and realism. Together, these sets showcase LEGO’s versatility across both form and function.
+The number of parts in a LEGO set often correlates with either extensive design detail (e.g., maps, buildings) or technical function (e.g., vehicles, machinery). Color proportions reveal the thematic purpose of each set where some aim for vibrant storytelling, while others reflect precision and realism. Together, these sets showcase LEGO’s versatility across both form and function.
 
 ------------------------------------------------------------------------
 
-### Discussion
+\newpage
+
+### Discussion:
 
 ```{r}
 #| message: false
@@ -400,8 +396,26 @@ correlation_result = cor(theme_correlation$n_sets,
 
 Based on @fig-most_popular and @fig-least_popular, it can be seen that the more popular themes have on average significantly fewer parts in comparison to the least popular themes. This indicates that accessibility, simplicity, and recognizability may play a more important role in determining a theme's success, rather than set complexity alone. Simpler sets can appeal to more customers, especially younger children and first time taster, making them more commercially successful.
 
-However, the correlation analysis between the number of sets in each theme and the median number of parts per set produced a Pearson correlation coefficient of `r round(correlation_result, 3)` . This indicates a very weak negative correlation, meaning there is little to no linear relationship between a theme's popularity (number of sets) and the complexity of its sets (median parts count). In other words, while popular themes often feature smaller sets, the number of sets in a theme does not strongly predict the typical complexity of those sets. In terms of inventory management, the production of simple sets within existing themes can help to boost sales. Therefore, the finding is aimed to emphasize that simplicity and accessibility are key factors of Lego theme popularity.
+However, the correlation analysis between the number of sets in each theme and the median number of parts per set produced a Pearson correlation coefficient of `r round(correlation_result, 3)` . This indicates a very weak negative correlation, meaning there is little to no linear relationship between a theme's popularity (number of sets) and the complexity of its sets (median parts count). In other words, while popular themes often feature smaller sets, the number of sets in a theme does not strongly predict the typical complexity of those sets. In terms of inventory management, the production of simple sets within existing themes can help to boost sales.
 
-In conclusion, our analysis highlights several key insights into LEGO’s evolution and product strategy:
-Firstly, LEGO focuses on certain themes, aligning with strong brand identities and wide audience appeal. Secondly, LEGO sets have obviously increased in complexity, reflecting better design, and building experiences. Finally, the most successful LEGO themes strategically balance innovation with accessibility, emphasizing thoughtful and inclusive design over mere complexity.
-This balanced approach not only maintains broad customer engagement but also supports sustained brand growth. As LEGO continues to evolve, understanding the interplay between complexity and accessibility will remain essential for its ongoing success.
+Overall, the finding is aimed to emphasize that simplicity and accessibility are key factors of Lego theme popularity.
+
+------------------------------------------------------------------------
+
+## Recommendations & Conclusion:
+
+Our analysis reveals several important insights into LEGO’s evolution and product strategy. LEGO’s focus on select themes has helped establish strong brand identities and broad appeal across diverse customer groups. Over time, LEGO sets have become increasingly complex, reflecting improvements in both design and user experience. However, our findings suggest that the company’s most successful themes are those that balance innovation with accessibility—ensuring that sets remain engaging for advanced builders while still approachable for newcomers.
+
+We recommend that LEGO continue to prioritize this balanced approach in future product development. By simultaneously fostering creativity and inclusiveness, LEGO is able to maintain high levels of customer engagement and support the brand's long-term growth. As the company's product portfolio expands, a continued focus on the interplay between set complexity and ease of use will be critical to maintaining its global success and relevance.
+
+------------------------------------------------------------------------
+
+\newpage
+
+## References
+
+LEGO. (n.d.). Top 10 Biggest LEGO® Sets Ever. Www.lego.com. <https://www.lego.com/en-us/categories/adults-welcome/article/biggest-lego-sets-ever-made>
+
+rfordatascience. (2022, September 6). LEGO Database by Rebrickable - TidyTuesday. GitHub. <https://github.com/rfordatascience/tidytuesday/tree/main/data/2022/2022-09-06>
+
+Wikipedia Contributors. (2019). *Lego*. Wikipedia; Wikimedia Foundation. <https://en.wikipedia.org/wiki/Lego>
